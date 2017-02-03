@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 
@@ -47,6 +48,8 @@ namespace AssemblyCSharp
 			if((currSkillNode.skillID + 1) < temp_dict.Count)
 			{
 				temp_dict[currSkillNode.skillID + 1].skillAccessible = true;
+				var temp_go = GameObject.Find("SkillNode_" + temp_dict[currSkillNode.skillID + 1].skillName);
+				temp_go.GetComponentInChildren<Button>().interactable = true;
 			}
 		}
 	}
