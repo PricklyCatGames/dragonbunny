@@ -8,12 +8,12 @@ namespace AssemblyCSharp
 	public class skill_Trails
 	{
 		#region variables
-		public string character { get; set; }
-		public List<skill_Nodes> skillNodes { get; set; }
-		public Dictionary<int, Dictionary<int, skill_Nodes>> skillTrails = new Dictionary<int, Dictionary<int, skill_Nodes>>();
+		//public string character { get; set; }
+		//public List<skill_Nodes> skillNodes { get; set; }
+		//public Dictionary<int, Dictionary<int, skill_Nodes>> skillTrails = new Dictionary<int, Dictionary<int, skill_Nodes>>();
 		#endregion
 
-		public skill_Trails(string aChar, List<skill_Nodes> char_nodes)
+		/*public skill_Trails(string aChar, List<skill_Nodes> char_nodes)
 		{
 			character = aChar;
 			skillNodes = char_nodes;
@@ -38,8 +38,8 @@ namespace AssemblyCSharp
 
 		public void obtainSkillNode(skill_Nodes currSkillNode)
 		{
-			var temp_dict = skillTrails[currSkillNode.skillPath];
-			temp_dict[currSkillNode.skillID].skillObtained = true;
+			//var temp_dict = skillTrails[currSkillNode.skillPath];
+			//temp_dict[currSkillNode.skillID].skillObtained = true;
 		}
 
 		public void unlockNextSkillNode(skill_Nodes currSkillNode)
@@ -51,7 +51,7 @@ namespace AssemblyCSharp
 				var temp_go = GameObject.Find("SkillNode_" + temp_dict[currSkillNode.skillID + 1].skillName);
 				temp_go.GetComponentInChildren<Button>().interactable = true;
 			}
-		}
+		}*/
 	}
 }
 

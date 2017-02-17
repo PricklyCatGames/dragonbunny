@@ -3,70 +3,129 @@ using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 
-namespace AssemblyCSharp
+namespace Skills
 {
 	public class skill_Main : MonoBehaviour
 	{
 		#region variables
-		public Dictionary<string, skill_Trails> skillTrails = new Dictionary<string, skill_Trails>();
+		public Dictionary<string, skill_Node> ankaliaSkillNodes = new Dictionary<string, skill_Node>();
+
+		public Dictionary<string, Dictionary<string, skill_Node>> allSkillNodes = new Dictionary<string, Dictionary<string, skill_Node>>();
 		#endregion
 
 		void Awake()
 		{
+			// Check to see if we have a saved skill set already. If not, then intialize.
 			initializeSkillTrails();
 		}
 
 		public void initializeSkillTrails()
 		{
-			List<skill_Nodes> ankaliaSkills = new List<skill_Nodes>();
-			#region Create Nodes
-			var luminesce = new skill_Nodes(0, 0, true, false, "Luminesce", 0, "No idea...", false, "", 0, 0.0f, 0.0f, 0.0f, 0.0f);
-			var light = new skill_Nodes(0, 1, false, false, "Light", 5, "No idea...", false, "", 0, 0.0f, 58.8f, 0.0f, 0.0f);
-			var lux = new skill_Nodes(0, 2, false, false, "Lux", 10, "No idea...", false, "", 0, 0.0f, 114.4f, 0.0f, 0.0f);
+			#region Create Nodes [Ankalia]
+			var luminesce = new skill_Node("Luminesce", true, true, 0, "No idea...", false, "", 0, "Light");
+			var light = new skill_Node("Light", true, false, 5, "No idea...", false, "", 0, "Lux");
+			var lux = new skill_Node("Lux", false, false, 10, "No idea...", false, "", 0, "");
+
+			var flame = new skill_Node("Flame", true, true, 0, "No idea...", false, "", 0, "Fire");
+			var smolder = new skill_Node("Smolder", true, false, 5, "No idea...", false, "", 0, "");
+
+			var hp_5 = new skill_Node("HP+5%", true, false, 5, "No idea...", false, "", 0, "MP+5%");
+			var mp_5 = new skill_Node("MP+5%", false, false, 7, "No idea...", false, "", 0, "Unkown_0");
+			var status_unknown_0 = new skill_Node("Unkown_0", false, false, 10, "No idea...", false, "", 0, "");
+
+			var agil_2 = new skill_Node("Agility+2", true, false, 6, "No idea...", false, "", 0, "Zen+1");
+			var zen_1 = new skill_Node("Zen+1", false, false, 9, "No idea...", false, "", 0, "Unkown_1");
+			var status_unknown_1 = new skill_Node("Unkown_1", false, false, 10, "No idea...", false, "", 0, "");
 			#endregion
 
-			#region Adding Nodes
-			ankaliaSkills.Add(luminesce);
-			ankaliaSkills.Add(light);
-			ankaliaSkills.Add(lux);
+			#region Adding Nodes [Ankalia]
+			ankaliaSkillNodes.Add("Luminesce", luminesce);
+			ankaliaSkillNodes.Add("Light", light);
+			ankaliaSkillNodes.Add("Lux", lux);
+
+			ankaliaSkillNodes.Add("Flame", flame);
+			ankaliaSkillNodes.Add("Smolder", smolder);
+
+			ankaliaSkillNodes.Add("HP+5%", hp_5);
+			ankaliaSkillNodes.Add("MP+5%", mp_5);
+			ankaliaSkillNodes.Add("Unkown_0", status_unknown_0);
+
+			ankaliaSkillNodes.Add("Agility+2", agil_2);
+			ankaliaSkillNodes.Add("Zen+1", zen_1);
+			ankaliaSkillNodes.Add("Unkown_1", status_unknown_1);
 			#endregion
 
-			#region Create Node GOs
-			foreach(var skillNode in ankaliaSkills)
-			{
-				var node = Instantiate(Resources.Load("SkillNode_", typeof(GameObject))) as GameObject;
-				node.transform.SetParent(GameObject.Find("Skill_Map").transform, false);
-				node.name = node.name.Remove(node.name.IndexOf("("));
-				node.name += skillNode.skillName;
-
-				node.GetComponent<skill_NodeGameObject>().path = skillNode.skillPath;
-				node.GetComponent<skill_NodeGameObject>().skillID = skillNode.skillID;
-				node.GetComponentInChildren<Text>().text = skillNode.skillName;
-				node.GetComponentInChildren<Button>().interactable = skillNode.skillAccessible;
-
-				node.GetComponent<RectTransform>().anchoredPosition = new Vector2(skillNode.x, skillNode.y);
-
-				node.GetComponentInChildren<Button>().onClick.AddListener(() => purchaseSkillNode(node));;
-			}
+			#region Adding All Nodes [* Characters]
+			allSkillNodes.Add("Ankalia", ankaliaSkillNodes);
 			#endregion
-
-			#region Create Trails
-			var ankaliaSkillTrail = new skill_Trails("ankalia", ankaliaSkills);
-			#endregion
-
-			this.skillTrails.Add("ankalia", ankaliaSkillTrail);
 		}
 
+		/// <summary>
+		/// Purchases the skill node and unlocks the next one.
+		/// </summary>
+		/// <param name="skillNode">Skill node GameObject.</param>
 		public void purchaseSkillNode(GameObject skillNode)
-		{
-			var skillNodeGO = skillNode.GetComponent<skill_NodeGameObject>();
-			var charName = "ankalia"; // TODO Figure out how to get this from within game
-			var charTrail = skillTrails[charName];
-			var currSkillNode = charTrail.skillTrails[skillNodeGO.path][skillNodeGO.skillID];
-			Debug.Log("Selected " + currSkillNode.skillName);
+		{			
+			var skillName = skillNode.name;
+			var charName = skillNode.transform.parent.parent.name.Split('_')[1];
+			var charSkillManager = GameObject.Find(charName + "SkillManager").GetComponent<characterSkillManager>();
 
-			charTrail.obtainSkillNode(currSkillNode);
-			charTrail.unlockNextSkillNode(currSkillNode);
+			print(charName + " " + skillName);
+			var currSkillNode = allSkillNodes[charName][skillName];
+
+			if(charSkillManager.mpPoints >= currSkillNode.skillCost)
+			{
+				if(currSkillNode.nextSkill != "")
+				{
+					this.checkSingleSkillLock(charSkillManager, currSkillNode);
+				}
+
+				// Perform alterations to character and perform necc. checks
+				charSkillManager.mpPoints -= currSkillNode.skillCost;
+				currSkillNode.skillObtained = true;
+
+			}
+		}
+
+		/// <summary>
+		/// Checks the single skill lock.
+		/// </summary>
+		/// <param name="charSkillManager">Char skill manager.</param>
+		/// <param name="skillNode">Skill node.</param>
+		public void checkSingleSkillLock(characterSkillManager charSkillManager, skill_Node currSkillNode)
+		{
+			var nextSkill_Button = GameObject.Find(currSkillNode.nextSkill).GetComponent<Button>();
+			var nextSkillNode = allSkillNodes[charSkillManager.name][nextSkill_Button.name];
+
+			if(charSkillManager.charLevel >= nextSkillNode.requiredCharaLevel)
+			{
+				nextSkill_Button.interactable = true;
+				nextSkillNode.skillAccessible = true;
+			}
+			else
+			{
+				// Possibly have some different color or text that displays on a tooltip that
+				// specifies the the character level is not reachable
+			}
+		}
+
+		/// <summary>
+		/// Checks all of the skills locked and unlocks it if the current character level is high enough.
+		/// </summary>
+		/// <param name="charLevel">Char level.</param>
+		/// <param name="charName">Char name.</param>
+		public void checkAllSkillLocks(characterSkillManager charSkillManager)
+		{
+			foreach(KeyValuePair<string, skill_Node> kv in allSkillNodes[charSkillManager.name])
+			{
+				if(!kv.Value.skillObtained && kv.Value.skillAccessible)
+				{
+					if(charSkillManager.charLevel >= kv.Value.requiredCharaLevel)
+					{
+						GameObject.Find(kv.Key).GetComponent<Button>().interactable = true;
+					}
+				}
+			}
 		}
 	}
 }
