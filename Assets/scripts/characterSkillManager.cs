@@ -4,7 +4,6 @@ using Skills;
 
 public class characterSkillManager : MonoBehaviour {
 
-
 	#region variables
 	public string name = "";
 	public int mpPoints = 0;

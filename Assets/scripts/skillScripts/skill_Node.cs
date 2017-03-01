@@ -24,17 +24,17 @@ namespace Skills
 		/// Initializes a new instance of the <see cref="Skills.skill_Nodes"/> class.
 		/// </summary>
 		/// <param name="id">Identifier.</param>
-		/// <param name="access">If set to <c>true</c> access.</param>
-		/// <param name="obtain">If set to <c>true</c> obtain.</param>
-		/// <param name="name">Name.</param>
-		/// <param name="cost">Cost.</param>
-		/// <param name="descr">Descr.</param>
+		/// <param name="access">If set to <c>true</c> able to be accessed/ clicked.</param>
+		/// <param name="obtain">If set to <c>true</c> able to be obtained/ purchased.</param>
+		/// <param name="name">Name of the skill.</param>
+		/// <param name="cost">Cost of the skill.</param>
+		/// <param name="descr">Description of the skill.</param>
 		/// <param name="allowDial">If set to <c>true</c> allow dialogue.</param>
-		/// <param name="dial">Dialogue.</param>
-		/// <param name="reqLvl">Req lvl.</param>
-		/// <param name="nextS">Next skill.</param>
+		/// <param name="dial">Dialogue that triggers when skill is purchased.</param>
+		/// <param name="reqLvl">Req lvl to unlock skill.</param>
+		/// <param name="nextS">Next skill unlocked after obtaining this skill.</param>
 		public skill_Node(/*int path, int id,*/string name, bool access, bool obtain, int cost, string descr, bool allowDial, 
-							string dial, int reqLvl, string nextS)
+							string dial, int reqLvl, string aNextSkill)
 		{
 			//skillPath = path;
 			skillAccessible = access;
@@ -46,7 +46,7 @@ namespace Skills
 			hasDialogue = allowDial;
 			dialogue = dial;
 			requiredCharaLevel = reqLvl;
-			nextSkill = nextS;
+			nextSkill = aNextSkill;
 		}
 	}
 }

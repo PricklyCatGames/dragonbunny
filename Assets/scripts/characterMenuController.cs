@@ -449,13 +449,22 @@ public class characterMenuController : MonoBehaviour
 	public void openSkillChart()
 	{
 		reset();
-		skillChart.SetActive(true);
+		//skillChart.SetActive(true);
 		loadSkillChart();
 	}
 
 	public void loadSkillChart()
 	{
-		
+		skillChart.GetComponent<CanvasGroup>().alpha = 1;
+		skillChart.GetComponent<CanvasGroup>().interactable = true;
+		skillChart.GetComponent<CanvasGroup>().blocksRaycasts = true;
+	}
+
+	public void unloadSkillChart()
+	{
+		skillChart.GetComponent<CanvasGroup>().alpha = 0;
+		skillChart.GetComponent<CanvasGroup>().interactable = false;
+		skillChart.GetComponent<CanvasGroup>().blocksRaycasts = false;
 	}
 
 	public void increaseSkillChart()
@@ -546,7 +555,8 @@ public class characterMenuController : MonoBehaviour
 		Destroy(charaPreview);
 		statsPanel.SetActive(false);
 		equipList.SetActive(false);
-		skillChart.SetActive(false);
+		//skillChart.SetActive(false);
+		unloadSkillChart();
 		skillList.SetActive(false);
 
 //		if (numCharas == 0)
