@@ -1,16 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/skillScripts/skill_Main.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/characterMenuController.cs">
     <Files>
       <File FileName="Assets/scripts/skillData.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/skillScripts/skill_Main.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/skillScripts/skill_Node.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/characterSkillManager.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/timeController.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/gameController.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/playerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/skillScripts/skill_Trails.cs" Line="1" Column="1" />
-      <File FileName="Assets/Standard Assets/ParticleSystems/Scripts/WaterHoseParticles.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/skillScripts/skill_Main.cs" Line="225" Column="49" />
+      <File FileName="Assets/scripts/skillScripts/skill_Node.cs" Line="27" Column="78" />
+      <File FileName="Assets/scripts/characterMenuController.cs" Line="466" Column="62" />
+      <File FileName="Assets/scripts/characterSkillManager.cs" Line="6" Column="1" />
+      <File FileName="Assets/scripts/characterStatusController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
