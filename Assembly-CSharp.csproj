@@ -55,6 +55,7 @@
      <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
      <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
      <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
+     <Compile Include="Assets\UIAllign.cs" />
      <Compile Include="Assets\scripts\Initializer.cs" />
      <Compile Include="Assets\scripts\achievementData.cs" />
      <Compile Include="Assets\scripts\alertManager.cs" />
