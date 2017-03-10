@@ -13,6 +13,12 @@ namespace Skills
 		public Dictionary<string, skill_Node> yakutSkillNodes = new Dictionary<string, skill_Node>();
 
 		public Dictionary<string, Dictionary<string, skill_Node>> allSkillNodes = new Dictionary<string, Dictionary<string, skill_Node>>();
+
+		public Color[] disabledColors = new Color[3];
+
+		public Color selectedCol;
+
+		public GameObject currSkillObj;
 		#endregion
 
 		#region Character Switch
@@ -24,9 +30,22 @@ namespace Skills
 		public int currIndex = 0;
 		#endregion
 
+		#region Character Stat Box
+		public Text charName;
+		public Text skillPoints;
+		#endregion
+
+		#region Skill Stat Box
+		public Text skillName;
+		public Text cost;
+		public Text descr;
+
+		public Button learnSkill;
+		#endregion
+
 		void Awake()
 		{
-			// Check to see if we have a saved skill set already. If not, then intialize.
+			// TODO Check to see if we have a saved skill set already. If not, then intialize.
 			initializeSkillTrails();
 		}
 
@@ -129,20 +148,48 @@ namespace Skills
 			#endregion
 		}
 
+		public void selectSkill(GameObject skillNode)
+		{
+			var skill = skillNode.name;
+			var name = charName.text;
+			var charSkillManager = GameObject.Find(name + "SkillManager").GetComponent<characterSkillManager>();
+
+			var currSkillNode = allSkillNodes[name][skill];
+
+			if(charSkillManager.skillPoints >= currSkillNode.skillCost && !currSkillNode.skillObtained)
+			{
+				learnSkill.interactable = true;
+			}
+			else
+			{
+				learnSkill.interactable = false;
+			}
+
+			skillName.text = skill;
+			cost.text = currSkillNode.skillCost.ToString();
+			descr.text = currSkillNode.skillDescription;
+
+			currSkillObj = skillNode;
+
+			var selCol = currSkillObj.GetComponent<Button>().colors;
+			selCol.highlightedColor = selectedCol;
+			currSkillObj.GetComponent<Button>().colors = selCol;
+		}
+
 		/// <summary>
 		/// Purchases the skill node and unlocks the next one.
 		/// </summary>
 		/// <param name="skillNode">Skill node GameObject.</param>
-		public void purchaseSkillNode(GameObject skillNode)
+		public void purchaseSkillNode()
 		{			
-			var skillName = skillNode.name;
-			var charName = skillNode.transform.parent.parent.name.Split('_')[1];
-			var charSkillManager = GameObject.Find(charName + "SkillManager").GetComponent<characterSkillManager>();
+			var skill = skillName.text;
+			var name = charName.text;
+			var charSkillManager = GameObject.Find(name + "SkillManager").GetComponent<characterSkillManager>();
 
 			print(charName + " " + skillName);
-			var currSkillNode = allSkillNodes[charName][skillName];
+			var currSkillNode = allSkillNodes[name][skill];
 
-			if(charSkillManager.mpPoints >= currSkillNode.skillCost)
+			if(charSkillManager.skillPoints >= currSkillNode.skillCost)
 			{
 				if(currSkillNode.nextSkill != "")
 				{
@@ -150,9 +197,14 @@ namespace Skills
 				}
 
 				// Perform alterations to character and perform necc. checks
-				charSkillManager.mpPoints -= currSkillNode.skillCost;
+				charSkillManager.skillPoints -= currSkillNode.skillCost;
 				currSkillNode.skillObtained = true;
 
+				var disCol = currSkillObj.GetComponent<Button>().colors;
+				disCol.normalColor = disabledColors[currIndex];
+				currSkillObj.GetComponent<Button>().colors = disCol;
+
+				learnSkill.interactable = false;
 			}
 		}
 
@@ -214,15 +266,22 @@ namespace Skills
 
 			var currNodeTree = characterNodeTrees[currIndex];
 
-			currNodeTree.alpha = 1;
-			currNodeTree.blocksRaycasts = true;
-			currNodeTree.interactable = true;
-
 			prevNodeTree.alpha = 0;
 			prevNodeTree.blocksRaycasts = false;
 			prevNodeTree.interactable = false;
 
+			currNodeTree.alpha = 1;
+			currNodeTree.blocksRaycasts = true;
+			currNodeTree.interactable = true;
+
 			characterName.text = characterNames[currIndex];
+
+			charName.text = characterNames[currIndex];
+			skillPoints.text = GameObject.Find(charName.text + "SkillManager").GetComponent<characterSkillManager>().skillPoints.ToString();
+
+			skillName.text = "";
+			cost.text = "";
+			descr.text = "";
 		}
 	}
 }

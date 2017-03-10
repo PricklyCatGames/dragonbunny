@@ -6,7 +6,7 @@ public class characterSkillManager : MonoBehaviour {
 
 	#region variables
 	public string name = "";
-	public int mpPoints = 0;
+	public int skillPoints = 0;
 	public int charLevel = 0;
 	public float exp = 0.0f;
 	public skill_Main mainSkill;

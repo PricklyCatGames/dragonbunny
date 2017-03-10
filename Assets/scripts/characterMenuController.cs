@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Skills;
 
 public class characterMenuController : MonoBehaviour
 {
@@ -458,6 +459,9 @@ public class characterMenuController : MonoBehaviour
 		skillChart.GetComponent<CanvasGroup>().alpha = 1;
 		skillChart.GetComponent<CanvasGroup>().interactable = true;
 		skillChart.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+		var mainSkill = skillChart.GetComponent<skill_Main>();
+		mainSkill.DisplayCharacterNodeTree(mainSkill.currIndex);
 	}
 
 	public void unloadSkillChart()
