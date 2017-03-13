@@ -57,6 +57,7 @@
      <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
      <Compile Include="Assets\UIAllign.cs" />
      <Compile Include="Assets\scripts\Initializer.cs" />
+     <Compile Include="Assets\scripts\UIPopUp.cs" />
      <Compile Include="Assets\scripts\achievementData.cs" />
      <Compile Include="Assets\scripts\alertManager.cs" />
      <Compile Include="Assets\scripts\battleController.cs" />

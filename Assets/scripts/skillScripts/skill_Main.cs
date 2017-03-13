@@ -30,17 +30,15 @@ namespace Skills
 		public int currIndex = 0;
 		#endregion
 
-		#region Character Stat Box
-		public Text charName;
-		public Text skillPoints;
-		#endregion
-
 		#region Skill Stat Box
+		public Text skillPoints;
 		public Text skillName;
 		public Text cost;
 		public Text descr;
 
 		public Button learnSkill;
+
+		public UIPopUp uiPopUp;
 		#endregion
 
 		void Awake()
@@ -151,7 +149,7 @@ namespace Skills
 		public void selectSkill(GameObject skillNode)
 		{
 			var skill = skillNode.name;
-			var name = charName.text;
+			var name = characterName.text;
 			var charSkillManager = GameObject.Find(name + "SkillManager").GetComponent<characterSkillManager>();
 
 			var currSkillNode = allSkillNodes[name][skill];
@@ -168,12 +166,15 @@ namespace Skills
 			skillName.text = skill;
 			cost.text = currSkillNode.skillCost.ToString();
 			descr.text = currSkillNode.skillDescription;
+			skillPoints.text = GameObject.Find(characterName.text + "SkillManager").GetComponent<characterSkillManager>().skillPoints.ToString();
 
 			currSkillObj = skillNode;
 
 			var selCol = currSkillObj.GetComponent<Button>().colors;
 			selCol.highlightedColor = selectedCol;
 			currSkillObj.GetComponent<Button>().colors = selCol;
+
+			uiPopUp.DisplayUIPopUp();
 		}
 
 		/// <summary>
@@ -183,10 +184,9 @@ namespace Skills
 		public void purchaseSkillNode()
 		{			
 			var skill = skillName.text;
-			var name = charName.text;
+			var name = characterName.text;
 			var charSkillManager = GameObject.Find(name + "SkillManager").GetComponent<characterSkillManager>();
 
-			print(charName + " " + skillName);
 			var currSkillNode = allSkillNodes[name][skill];
 
 			if(charSkillManager.skillPoints >= currSkillNode.skillCost)
@@ -199,12 +199,15 @@ namespace Skills
 				// Perform alterations to character and perform necc. checks
 				charSkillManager.skillPoints -= currSkillNode.skillCost;
 				currSkillNode.skillObtained = true;
+				skillPoints.text = charSkillManager.skillPoints.ToString();
 
 				var disCol = currSkillObj.GetComponent<Button>().colors;
 				disCol.normalColor = disabledColors[currIndex];
 				currSkillObj.GetComponent<Button>().colors = disCol;
 
 				learnSkill.interactable = false;
+
+				uiPopUp.HideUIPopUp();
 			}
 		}
 
@@ -276,8 +279,7 @@ namespace Skills
 
 			characterName.text = characterNames[currIndex];
 
-			charName.text = characterNames[currIndex];
-			skillPoints.text = GameObject.Find(charName.text + "SkillManager").GetComponent<characterSkillManager>().skillPoints.ToString();
+			skillPoints.text = GameObject.Find(characterName.text + "SkillManager").GetComponent<characterSkillManager>().skillPoints.ToString();
 
 			skillName.text = "";
 			cost.text = "";
