@@ -163,6 +163,14 @@ namespace Skills
 				learnSkill.interactable = false;
 			}
 
+			if(currSkillNode.skillObtained)
+			{
+				learnSkill.GetComponentInChildren<Text>().text = "Skill Learned";
+			}
+			else
+			{
+				learnSkill.GetComponentInChildren<Text>().text = "Learn Skill";
+			}
 			skillName.text = skill;
 			cost.text = currSkillNode.skillCost.ToString();
 			descr.text = currSkillNode.skillDescription;
