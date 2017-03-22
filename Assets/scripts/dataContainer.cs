@@ -8,6 +8,8 @@ public enum Characters {Ankalia, Bressa, Yakut, Masamba,
 
 public enum NPCType {town, shop, quest, teacher, other};
 
+public enum EventType {story = 0, recurring = 1, quest = 2, playerCaused = 3};
+
 public enum questType {story, collection, kill, delivery, escort};
 
 public enum ItemType {usable, quest, armour, weapon, keyItem, misc};

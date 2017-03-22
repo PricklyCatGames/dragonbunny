@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using Skills;
 
 public class characterMenuController : MonoBehaviour
 {
@@ -88,6 +89,7 @@ public class characterMenuController : MonoBehaviour
 	{
 		reset();
 		statsPanel.SetActive(true);
+		gameController.menuDepth = 3;
 
 		createPreview();
 	}
@@ -180,6 +182,7 @@ public class characterMenuController : MonoBehaviour
 		loadEquipStats();
 		listEquip();
 		displayCurrentEquip();
+		gameController.menuDepth = 3;
 	}
 
 	public void loadEquipStats()
@@ -449,13 +452,29 @@ public class characterMenuController : MonoBehaviour
 	public void openSkillChart()
 	{
 		reset();
-		skillChart.SetActive(true);
+		//skillChart.SetActive(true);
 		loadSkillChart();
 	}
 
 	public void loadSkillChart()
 	{
-		
+		skillChart.GetComponent<CanvasGroup>().alpha = 1;
+		skillChart.GetComponent<CanvasGroup>().interactable = true;
+		skillChart.GetComponent<CanvasGroup>().blocksRaycasts = true;
+
+		var mainSkill = skillChart.GetComponent<skill_Main>();
+		mainSkill.DisplayCharacterNodeTree(mainSkill.currIndex);
+		gameController.menuDepth = 3;
+//		Debug.Log("(charaMenu 466)menuDepth = " + gameController.menuDepth);
+	}
+
+	public void unloadSkillChart()
+	{
+		skillChart.GetComponent<CanvasGroup>().alpha = 0;
+		skillChart.GetComponent<CanvasGroup>().interactable = false;
+		skillChart.GetComponent<CanvasGroup>().blocksRaycasts = false;
+		gameController.menuDepth = 2;
+//		Debug.Log("(charaMenu 475)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void increaseSkillChart()
@@ -501,6 +520,7 @@ public class characterMenuController : MonoBehaviour
 		reset();
 		skillList.SetActive(true);
 		loadSkillList();
+		gameController.menuDepth = 3;
 	}
 
 	public void loadSkillList()
@@ -546,8 +566,10 @@ public class characterMenuController : MonoBehaviour
 		Destroy(charaPreview);
 		statsPanel.SetActive(false);
 		equipList.SetActive(false);
-		skillChart.SetActive(false);
+		//skillChart.SetActive(false);
+		unloadSkillChart();
 		skillList.SetActive(false);
+		gameController.menuDepth = 2;
 
 //		if (numCharas == 0)
 		{

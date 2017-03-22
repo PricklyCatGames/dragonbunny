@@ -60,7 +60,7 @@ public class shopMenuController : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-		closeMenu();
+//		closeMenu();
 		selectMenu.SetActive(false);
 	}
 	
@@ -79,6 +79,7 @@ public class shopMenuController : MonoBehaviour
 		selectedItemIndex = 0;
 		loadCharaStats();
 		loadShopItemList();
+		gameController.menuDepth = 3;
 	}
 
 	public void openSellMenu()
@@ -89,6 +90,7 @@ public class shopMenuController : MonoBehaviour
 		sellMenu.SetActive(true);
 		selectedItemIndex = 0;
 		loadInventoryList();
+		gameController.menuDepth = 3;
 	}
 
 	public void loadShopItemList()
@@ -170,6 +172,8 @@ public class shopMenuController : MonoBehaviour
 			{
 				alertPanel.SetActive(true);
 				alertText.text = carryAlert;
+				gameController.menuDepth = 4;
+//				Debug.Log("(shopMenu 174)menuDepth = " + gameController.menuDepth);
 			}
 		}
 
@@ -213,16 +217,22 @@ public class shopMenuController : MonoBehaviour
 			{
 				alertPanel.SetActive(true);
 				alertText.text = moneyAlert;
+				gameController.menuDepth = 4;
+//				Debug.Log("(shopMenu 219)menuDepth = " + gameController.menuDepth);
 			}
 			else if (shopItem.itemInventoryCount >= shopItem.itemCarryLimit)
 			{
 				alertPanel.SetActive(true);
 				alertText.text = carryAlert;
+				gameController.menuDepth = 4;
+//				Debug.Log("(shopMenu 226)menuDepth = " + gameController.menuDepth);
 			}
 			else
 			{
 				alertPanel.SetActive(true);
 				alertText.text = inventoryAlert;
+				gameController.menuDepth = 4;
+//				Debug.Log("(shopMenu 233)menuDepth = " + gameController.menuDepth);
 			}
 		}
 	}
@@ -243,8 +253,16 @@ public class shopMenuController : MonoBehaviour
 			{
 				alertPanel.SetActive(true);
 				alertText.text = equippedAlert;
+				gameController.menuDepth = 4;
+//				Debug.Log("(shopMenu 255)menuDepth = " + gameController.menuDepth);
 			}
 		}
+	}
+
+	public void cancelTransaction()
+	{
+//		gameController.menuDepth = 2;
+//		Debug.Log("(shopMenu 263)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void loadInventoryList()
@@ -320,6 +338,8 @@ public class shopMenuController : MonoBehaviour
 	public void openEquipPanel()
 	{
 		equipPanel.SetActive(true);
+		gameController.menuDepth = 4;
+//		Debug.Log("(shopMenu 340)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void equipCharacter()
@@ -330,16 +350,22 @@ public class shopMenuController : MonoBehaviour
 	public void closeEquipPanel()
 	{
 		equipPanel.SetActive(false);
+		gameController.menuDepth = 3;
+//		Debug.Log("(shopMenu 352)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void openAlert()
 	{
 		alertPanel.SetActive(true);
+		gameController.menuDepth = 4;
+//		Debug.Log("(shopMenu 359)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void dismissAlert()
 	{
 		alertPanel.SetActive(false);
+		gameController.menuDepth = 3;
+//		Debug.Log("(shopMenu 366)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void closeMenu()
@@ -371,6 +397,8 @@ public class shopMenuController : MonoBehaviour
 		buyMenu.SetActive(false);
 		sellMenu.SetActive(false);
 		bgPanel.SetActive(false);
+		gameController.menuDepth = 2;
+//		Debug.Log("(shopMenu 399)menuDepth = " + gameController.menuDepth);
 
 		numCharas = gameController.availCharas.Count;
 		selectedChara = gameController.currentChara;

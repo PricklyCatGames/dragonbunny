@@ -16,6 +16,7 @@ public class calendarController : MonoBehaviour
 	public Text[] notesText;
 	public GameObject reminderSelector;
 	dayController dayController;
+	public gameController gameController;
 	timeController timeController;
 	public int selectedYear;
 	public int selectedMonth;
@@ -218,6 +219,8 @@ public class calendarController : MonoBehaviour
 	public void openDate(int day)
 	{
 		notesPanel.SetActive(true);
+		gameController.menuDepth = 3;
+		
 		notesText[0].text = "No notes.";
 		notesText[1].text = "";
 
@@ -247,13 +250,18 @@ public class calendarController : MonoBehaviour
 
 	public void addNote()
 	{
-		
+//		gameController.menuDepth = 4;
 	}
 
 	public void selectReminder(int reminderNumber)
 	{
 		dayController.hasReminder = true;
 		dayController.reminderNumber = reminderNumber;
+	}
+
+	public void cancelReminder()
+	{
+//		gameController.menuDepth = 3;
 	}
 
 	public void removeNote()
@@ -265,6 +273,12 @@ public class calendarController : MonoBehaviour
 	public void closeNotes()
 	{
 		notesPanel.SetActive(false);
+		gameController.menuDepth = 2;
+	}
+
+	public void cancelNote()
+	{
+//		gameController.menuDepth = 3;
 	}
 
 	bool isHoliday(int day)

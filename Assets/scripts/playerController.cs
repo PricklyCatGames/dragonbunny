@@ -31,9 +31,9 @@ public class playerController : MonoBehaviour
 	float lastGroundTime;
 	public bool isGrounded;
 	public bool isClimbing;
-	bool wasClimbing;
+//	bool wasClimbing;
 	public bool isHanging;
-	bool wasHanging;
+//	bool wasHanging;
 	public Vector3 climbDirection;
 	public float gravity;
 	public float maxFallSpeed;
@@ -264,6 +264,11 @@ public class playerController : MonoBehaviour
 		}
 	}
 
+	public void moveToTarget()
+	{
+
+	}
+
 	void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "event")
@@ -376,13 +381,13 @@ public class playerController : MonoBehaviour
 
 		if (other.tag == "climbable" && isClimbing)
 		{
-			wasClimbing = true;
+//			wasClimbing = true;
 			isClimbing = false;
 		}
 
 		if (other.tag == "hangArea" && isHanging)
 		{
-			wasHanging = true;
+//			wasHanging = true;
 			isHanging = false;
 		}
 

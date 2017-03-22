@@ -4,9 +4,9 @@ using System.Collections;
 public class eventData : MonoBehaviour
 {
 	#region variables
-	public enum EventType {story = 0, recurring = 1, quest = 2, playerCaused = 3};
-	public enum Characters {Ankalia = 0, Bressa = 1, Yakut = 2, Masamba = 3,
-						Eb = 4, chara6 = 5, chara7 = 6, Vendax = 7};
+//	public enum EventType {story = 0, recurring = 1, quest = 2, playerCaused = 3};
+//	public enum Characters {Ankalia = 0, Bressa = 1, Yakut = 2, Masamba = 3,
+//						Eb = 4, chara6 = 5, chara7 = 6, Vendax = 7};
 	public int eventID = 0;
 	public string eventName;
 	public EventType type;

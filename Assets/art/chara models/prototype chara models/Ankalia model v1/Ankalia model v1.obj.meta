@@ -1,0 +1,145 @@
+fileFormatVersion: 2
+guid: 9b15b4b4fcb954cf8885eb9855cc3268
+timeCreated: 1486979180
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Belts_(Chest)
+    100004: Body
+    100006: Bottoms
+    100008: default
+    100010: Eyelashes
+    100012: Gloves
+    100014: Hair
+    100016: ME_BOOT_Straps
+    100018: Shoes
+    100020: Tops
+    100022: WaistCoats
+    400000: //RootNode
+    400002: Belts_(Chest)
+    400004: Body
+    400006: Bottoms
+    400008: default
+    400010: Eyelashes
+    400012: Gloves
+    400014: Hair
+    400016: ME_BOOT_Straps
+    400018: Shoes
+    400020: Tops
+    400022: WaistCoats
+    2300000: Belts_(Chest)
+    2300002: Body
+    2300004: Bottoms
+    2300006: default
+    2300008: Eyelashes
+    2300010: Gloves
+    2300012: Hair
+    2300014: ME_BOOT_Straps
+    2300016: Shoes
+    2300018: Tops
+    2300020: WaistCoats
+    3300000: Belts_(Chest)
+    3300002: Body
+    3300004: Bottoms
+    3300006: default
+    3300008: Eyelashes
+    3300010: Gloves
+    3300012: Hair
+    3300014: ME_BOOT_Straps
+    3300016: Shoes
+    3300018: Tops
+    3300020: WaistCoats
+    4300000: Belts_(Chest)
+    4300002: Body
+    4300004: Bottoms
+    4300006: default
+    4300008: Eyelashes
+    4300010: Gloves
+    4300012: Hair
+    4300014: ME_BOOT_Straps
+    4300016: Shoes
+    4300018: Tops
+    4300020: WaistCoats
+    6400000: Belts_(Chest)
+    6400002: Body
+    6400004: Bottoms
+    6400006: default
+    6400008: Eyelashes
+    6400010: Gloves
+    6400012: Hair
+    6400014: ME_BOOT_Straps
+    6400016: Shoes
+    6400018: Tops
+    6400020: WaistCoats
+    9500000: //RootNode
+    11100000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.015625
+    meshCompression: 0
+    addColliders: 1
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: default
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

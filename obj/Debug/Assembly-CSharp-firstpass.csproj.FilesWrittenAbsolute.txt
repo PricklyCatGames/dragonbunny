@@ -17,3 +17,30 @@
 /Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/obj/Debug/Assembly-CSharp-firstpass.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/obj/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/UnityEngine.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/UnityEditor.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/UnityEngine.UI.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/UnityEngine.Networking.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/UnityEngine.VR.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Mono.Cecil.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Unity.SerializationLogic.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Unity.DataContract.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Unity.UNetWeaver.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Unity.UNetWeaver.dll.mdb
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Unity.CecilTools.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Mono.Cecil.Pdb.dll
+/Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.Advertisements.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.VR.dll

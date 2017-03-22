@@ -7,6 +7,7 @@ public class characterStatusController : MonoBehaviour
 {
 	#region variables
 	public string charaName;
+	public Canvas charaCanvas;
 	public Text charaNameText;
 	public GameObject dialoguePanel;
 	public Text dialogueText;
@@ -34,6 +35,7 @@ public class characterStatusController : MonoBehaviour
 	public int maxSkillPoints;
 
 	public int maxAttributeValue;
+	public int size;
 	public int strength;
 	public int intelligence;
 	public int dexterity;
@@ -60,6 +62,7 @@ public class characterStatusController : MonoBehaviour
 	public int rangedAcc;
 	public int baseEva;
 	public int evasion;
+	public int[] battleSquares;
 	public int attackSpeed;
 	public float actionTimer;
 	public float baseActionDelay;
@@ -79,6 +82,7 @@ public class characterStatusController : MonoBehaviour
 	public bool regened;
 	public bool MPRegened;
 
+	public int defaultAction;
 	public List<skillData> availSkills = new List<skillData>();
 	public List<float> skillUseRate = new List<float>();
 	public List<float> skillTimers = new List<float>();
@@ -113,6 +117,10 @@ public class characterStatusController : MonoBehaviour
 			if (skillTimers[i] > 0)
 			{
 				skillTimers[i] -= Time.smoothDeltaTime;
+			}
+			else if (skillTimers[i] < 0)
+			{
+				skillTimers[i] = 0;
 			}
 		}
 
@@ -234,29 +242,31 @@ public class characterStatusController : MonoBehaviour
 		expToNextLvl = Mathf.RoundToInt(expToNextLvl * 1.05f);
 		
 		/*
+		if (level % 4 == 0)
 //		 maxAttributeValue;
-		strength;
-		intelligence;
-		dexterity;
-		agility;
-		endurance;
-		luck;
-		clarity; //magic focus
-		zen;  //physical focus
-		parry;
-		block;
+		strength++;
+		intelligence++;
+		dexterity++;
+		agility++;
+		endurance++;
+		luck++;
+		clarity++; //magic focus
+		zen++;  //physical focus
+		parry++;
+		block++;
 
-		baseAttack;
-		baseDefense;
-		magicAtk;
-		magicDef;
-		baseAccuracy;
-		magicAcc;
-		rangedAtk;
-		rangedAcc;
-		baseEva;
-		critHitRate;
-		*/
+		if (level % 3 == 0)
+		baseAttack++;
+		baseDefense++;
+		magicAtk++;
+		magicDef++;
+		baseAccuracy++;
+		magicAcc++;
+		rangedAtk++;
+		rangedAcc++;
+		baseEva++;
+		critHitRate++;
+		//*/
 
 		updateStats();
 	}
