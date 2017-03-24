@@ -154,6 +154,11 @@ public class enemyController : MonoBehaviour
 //		return target;
 	}
 
+	public void moveToTarget()
+	{
+		
+	}
+
 	public void wander()
 	{
 		

@@ -17,24 +17,29 @@ public class gameController : MonoBehaviour
 	public GameObject[] currentParty;
 	public int numCharasInParty;
 	public GameObject currentCharacter;
+	public Canvas currCharaCanvas;
 	public Transform spawnPoint;
 
 	public GameObject menu;
 	public GameObject storeMenu;
+	public int menuDepth;
 
 	public Text announceText;
 	public Text alertText;
 	public GameObject addEntryButton;
 
 //	dataContainer data;
-	public menuController menuController;
 	masterListController masterList;
+	public menuController menuController;
+	public shopMenuController shopMenuController;
+	public calendarController calendarController;
 	timeController timeController;
-	weatherController weatherController;
+//	weatherController weatherController;
 	public playerController playerController;
 	cameraController cameraController;
 	inventoryController inventoryController;
-	mapController mapController;
+	public inventoryMenuController inventoryMenuController;
+//	mapController mapController;
 	battleController battleController;
 //	objectController objectController;
 //	itemController itemController;
@@ -56,9 +61,9 @@ public class gameController : MonoBehaviour
 //		data = GameObject.FindGameObjectWithTag("data").GetComponent<dataContainer>();
 		masterList = GetComponentInChildren<masterListController>();
 		timeController = GameObject.Find("TimeController").GetComponent<timeController>();
-		weatherController = GetComponent<weatherController>();
+//		weatherController = GetComponent<weatherController>();
 		cameraController = GameObject.Find("Camera").GetComponent<cameraController>();
-		mapController = GetComponent<mapController>();
+//		mapController = GetComponent<mapController>();
 		battleController = GetComponent<battleController>();
 		currentParty = new GameObject[maxPartySize];
 		loadCharas();
@@ -73,6 +78,7 @@ public class gameController : MonoBehaviour
 		menu.SetActive(false);
 		playerController.isControllable = true;
 		cameraController.isControllable = true;
+		menuDepth = 0;
 	}
 	
 	// Update is called once per frame
@@ -97,24 +103,78 @@ public class gameController : MonoBehaviour
 					openMenu();
 					playerController.isControllable = false;
 					cameraController.isControllable = false;
+//					Debug.Log("(gameController 106)menuDepth = " + menuDepth);
+//					menuDepth = 1;
 				}
 
 				if (cancelButton)
 				{
-					if (menuController.submenuOpen)
+//					Debug.Log("(gameController 112)menuDepth = " + menuDepth);
+					switch (menuDepth)
 					{
-						menuController.closeMenu();
+						case 1:
+						{
+							closeMenu();
+							closeStoreMenu();
+							playerController.isControllable = true;
+							cameraController.isControllable = true;
+							break;
+						}
+						case 2:
+						{
+							menuController.closeMenu(menuDepth);
+							shopMenuController.cancelTransaction();
+							menuDepth = 1;
+							break;
+						}
+						case 3:
+						{
+							menuController.closeMenu(menuDepth);
+							calendarController.closeNotes();
+							shopMenuController.closeEquipPanel();
+							shopMenuController.dismissAlert();
+							inventoryMenuController.closeCharaSelectMenu();
+							inventoryMenuController.cancelSelectAmount();
+							menuDepth = 2;
+							break;
+						}
+						case 4:
+						{
+							menuController.closeMenu(menuDepth);
+							calendarController.cancelNote();
+							calendarController.cancelReminder();
+							shopMenuController.dismissAlert();
+							menuDepth = 3;
+							break;
+						}
+						case 5:
+						{
+							menuController.closeMenu(menuDepth);
+							menuDepth = 4;
+							break;
+						}
 					}
-					else
-					{
-						closeMenu();
-						closeStoreMenu();
-						playerController.isControllable = true;
-						cameraController.isControllable = true;
-					}
+
+//					if (menuController.submenuOpen)
+//					{
+//						menuController.closeMenu();
+//					}
+//					else
+//					{
+//						closeMenu();
+//						closeStoreMenu();
+//						playerController.isControllable = true;
+//						cameraController.isControllable = true;
+//					}
 				}
 			}
 		}
+
+//		if (menuDepth < 0)
+//		{
+//			Debug.Log("menuDepth = " + menuDepth);
+//			menuDepth = 0;
+//		}
 	}
 
 	public void loadCharas()
@@ -144,6 +204,7 @@ public class gameController : MonoBehaviour
 		currentCharacter.GetComponent<playerController>().enabled = true;
 		currentCharacter.GetComponent<Collider>().enabled = true;
 		playerController = currentCharacter.GetComponent<playerController>();
+		currCharaCanvas = currentCharacter.GetComponent<characterStatusController>().charaCanvas;
 		cameraController.followTarget = currentCharacter.transform;
 		cameraController.normalPos = currentCharacter.transform.Find("normalCameraPos").transform;
 	}
@@ -188,6 +249,7 @@ public class gameController : MonoBehaviour
 	public void closeStoreMenu()
 	{
 		timeController.currentTimeScale = timeController.normalTimeScale;
+		currCharaCanvas.enabled = true;
 //		storeMenu.SetActive(false);
 	}
 
@@ -195,12 +257,19 @@ public class gameController : MonoBehaviour
 	{
 		menu.SetActive(true);
 		timeController.currentTimeScale = timeController.menuTimeScale;
+		currCharaCanvas.enabled = false;
+		menuDepth = 1;
+//		Debug.Log("(gameController 258)menuDepth = " + menuDepth);
 	}
 
 	public void closeMenu()
 	{
+		menuController.closeMenu();
 		menu.SetActive(false);
 		timeController.currentTimeScale = timeController.normalTimeScale;
+		currCharaCanvas.enabled = true;
+		menuDepth = 0;
+//		Debug.Log("(gameController 267)menuDepth = " + menuDepth);
 	}
 
 	public void PauseGame()

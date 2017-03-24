@@ -35,6 +35,7 @@ public class menuController : MonoBehaviour
 
 	gameController gameController;
 	inventoryController inventoryController;
+	public inventoryMenuController inventoryMenuController;
 	public characterMenuController characterMenuController;
 	characterStatusController charaStatus;
 	#endregion
@@ -56,6 +57,8 @@ public class menuController : MonoBehaviour
 		closeMenu();
 		charaStatusMenu.SetActive(true);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 60)menuDepth = " + gameController.menuDepth);
 
 		characterMenuController.numCharas = gameController.availCharas.Count;
 		characterMenuController.charaPreviews = gameController.availCharas.ToArray();
@@ -69,12 +72,15 @@ public class menuController : MonoBehaviour
 		partyList.SetActive(false);
 		partyPosPanel.SetActive(false);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 75)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void openPartyList()
 	{
 		partyList.SetActive(true);
 		partyPosPanel.SetActive(false);
+		gameController.menuDepth = 3;
 
 		for (int i = 0; i < gameController.numCharasInParty; i++)
 		{
@@ -87,6 +93,7 @@ public class menuController : MonoBehaviour
 	{
 		partyList.SetActive(false);
 		partyPosPanel.SetActive(true);
+		gameController.menuDepth = 3;
 	}
 
 	public void openInventory()
@@ -94,6 +101,8 @@ public class menuController : MonoBehaviour
 		closeMenu();
 		inventory.SetActive(true);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 102)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void openCalendar()
@@ -101,6 +110,8 @@ public class menuController : MonoBehaviour
 		closeMenu();
 		calendar.SetActive(true);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 111)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void openQuestLog()
@@ -108,6 +119,8 @@ public class menuController : MonoBehaviour
 		closeMenu();
 		questLog.SetActive(true);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 120)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void openJournal()
@@ -115,6 +128,8 @@ public class menuController : MonoBehaviour
 		closeMenu();
 		journal.SetActive(true);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 129)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void openMap()
@@ -122,6 +137,8 @@ public class menuController : MonoBehaviour
 		closeMenu();
 		map.SetActive(true);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 138)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void openAchievementList()
@@ -129,6 +146,8 @@ public class menuController : MonoBehaviour
 		closeMenu();
 		achievementList.SetActive(true);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 147)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void saveGame()
@@ -141,6 +160,8 @@ public class menuController : MonoBehaviour
 		closeMenu();
 		optionsMenu.SetActive(true);
 		submenuOpen = true;
+		gameController.menuDepth = 2;
+//		Debug.Log("(menuController 161)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void closeMenu()
@@ -153,6 +174,7 @@ public class menuController : MonoBehaviour
 		}
 		charaStatusMenu.SetActive(false);
 		partyMenu.SetActive(false);
+		partyPosPanel.SetActive(false);
 		inventory.SetActive(false);
 		if (calendar.activeInHierarchy)
 		{
@@ -166,6 +188,69 @@ public class menuController : MonoBehaviour
 		achievementList.SetActive(false);
 		optionsMenu.SetActive(false);
 		submenuOpen = false;
+		gameController.menuDepth = 1;
+//		Debug.Log("(menuController 188)menuDepth = " + gameController.menuDepth);
+	}
+
+	public void closeMenu(int depth)
+	{
+		announceText.text = "";
+		alertText.text = "";
+
+		switch (depth)
+		{
+			case 2:
+			{
+//				if (charaStatusMenu.activeInHierarchy)
+//				{
+//					characterMenuController.reset();
+//				}
+//				charaStatusMenu.SetActive(false);
+//				partyMenu.SetActive(false);
+//				inventory.SetActive(false);
+//				if (calendar.activeInHierarchy)
+//				{
+//					calendar.GetComponent<calendarController>().reset();
+//				}
+//				calendar.SetActive(false);
+//				questLog.SetActive(false);
+//				journal.SetActive(false);
+//				map.SetActive(false);
+//				achievementList.SetActive(false);
+//				optionsMenu.SetActive(false);
+				closeMenu();
+				gameController.menuDepth = 1;
+//				Debug.Log("(menuController 218)menuDepth = " + gameController.menuDepth);
+				break;
+			}
+			case 3:
+			{
+				addEntryButton.SetActive(false);
+				partyList.SetActive(false);
+				partyPosPanel.SetActive(false);
+				characterMenuController.reset();
+				inventoryMenuController.closeMenu();
+				gameController.menuDepth = 2;
+//				Debug.Log("(menuController 230)menuDepth = " + gameController.menuDepth);
+				break;
+			}
+			case 4:
+			{
+				gameController.menuDepth = 3;
+//				Debug.Log("menuDepth = " + gameController.menuDepth);
+				break;
+			}
+			case 5:
+			{
+				gameController.menuDepth = 4;
+				break;
+			}
+			case 6:
+			{
+				gameController.menuDepth = 5;
+				break;
+			}
+		}
 	}
 
 	public void exitGame()

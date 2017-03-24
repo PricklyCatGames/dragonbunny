@@ -42,3 +42,9 @@
 /Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Unity.CecilTools.dll
 /Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Volumes/Jacob Clark/UnityProjects/Dragon Bunny/dragonbunny/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.Advertisements.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.PlaymodeTestsRunner.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.Analytics.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.HoloLens.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/shiiko/Desktop/coding/dragon bunny/DragonBunny/Temp/bin/Debug/UnityEngine.VR.dll

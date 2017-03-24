@@ -3,8 +3,9 @@ using System.Collections;
 
 public enum Seasons {Winter, Spring, Summer, Autumn};
 
-public enum Characters {Ankalia, Bressa, Yakut, Masamba,
-						Eb, chara6, chara7, Styx, UnicornFrog, Vendax};
+public enum Characters {Ankalia, Bressa, Yakut, Masamba, Eb, 
+						Kindo, chara7, Styx, UnicornFrog, Vendax, 
+						Klarrstral, enemy};
 
 public enum NPCType {town, shop, quest, teacher, other};
 

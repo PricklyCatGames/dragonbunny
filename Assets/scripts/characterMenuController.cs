@@ -89,6 +89,7 @@ public class characterMenuController : MonoBehaviour
 	{
 		reset();
 		statsPanel.SetActive(true);
+		gameController.menuDepth = 3;
 
 		createPreview();
 	}
@@ -181,6 +182,7 @@ public class characterMenuController : MonoBehaviour
 		loadEquipStats();
 		listEquip();
 		displayCurrentEquip();
+		gameController.menuDepth = 3;
 	}
 
 	public void loadEquipStats()
@@ -462,6 +464,8 @@ public class characterMenuController : MonoBehaviour
 
 		var mainSkill = skillChart.GetComponent<skill_Main>();
 		mainSkill.DisplayCharacterNodeTree(mainSkill.currIndex);
+		gameController.menuDepth = 3;
+//		Debug.Log("(charaMenu 466)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void unloadSkillChart()
@@ -469,6 +473,8 @@ public class characterMenuController : MonoBehaviour
 		skillChart.GetComponent<CanvasGroup>().alpha = 0;
 		skillChart.GetComponent<CanvasGroup>().interactable = false;
 		skillChart.GetComponent<CanvasGroup>().blocksRaycasts = false;
+		gameController.menuDepth = 2;
+//		Debug.Log("(charaMenu 475)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void increaseSkillChart()
@@ -514,6 +520,7 @@ public class characterMenuController : MonoBehaviour
 		reset();
 		skillList.SetActive(true);
 		loadSkillList();
+		gameController.menuDepth = 3;
 	}
 
 	public void loadSkillList()
@@ -562,6 +569,7 @@ public class characterMenuController : MonoBehaviour
 		//skillChart.SetActive(false);
 		unloadSkillChart();
 		skillList.SetActive(false);
+		gameController.menuDepth = 2;
 
 //		if (numCharas == 0)
 		{

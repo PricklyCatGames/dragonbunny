@@ -9,7 +9,7 @@ public class skillData : MonoBehaviour
 	public string skillDescription;
 	public bool hasDialogue;
 	public string dialogue;
-	public int requiredCharaLevel;
+//	public int requiredCharaLevel;
 	public bool isPhysical;
 	public bool isRanged;
 	public bool usesWeapon;

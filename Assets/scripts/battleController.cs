@@ -8,13 +8,48 @@ public class battleController : MonoBehaviour
 	#region variables
 	public bool battleMode;
 	public GameObject battleMenu;
+	public Transform enemyContainer;
+//	int gridWidth = 7;
+//	int gridHeight = 6;
+	public GameObject battleGridMain;
+	public Transform[] battleGrid = new Transform[42];
+//	public Vector2[][] battleGridPos = new Vector2[7][];
+	public bool[] battleGridOccupancy = new bool[42];
+	public GameObject increaseCharaButton;
+	public GameObject decreaseCharaButton;
 	public Text charaNameText;
 	public Slider HPSlider;
 	public Slider MPSlider;
+	public Text defaultTimerText;
+	public float defaultTimer;
 	public Text attackTimerText;
 	public float attackTimer;
 	public Text defendTimerText;
 	public float defendTimer;
+	public Text fleeTimerText;
+	public float fleeTimer;
+	public Button magicButton;
+	public GameObject magicMenu;
+	public GameObject magicMenuContent;
+	public GameObject magicSubmenu;
+	public GameObject magicSubmenuContent;
+	public GameObject fireSubmenu;
+	public GameObject fireSubmenuContent;
+	public GameObject lightningSubmenu;
+	public GameObject lightningSubmenuContent;
+	public GameObject windSubmenu;
+	public GameObject windSubmenuContent;
+	public GameObject iceSubmenu;
+	public GameObject iceSubmenuContent;
+	public GameObject lightSubmenu;
+	public GameObject lightSubmenuContent;
+	public GameObject waterSubmenu;
+	public GameObject waterSubmenuContent;
+	public GameObject earthSubmenu;
+	public GameObject earthSubmenuContent;
+	public GameObject darkSubmenu;
+	public GameObject darkSubmenuContent;
+//	public float[][] skillTimers = new float[3][];
 	public Button skillsButton;
 	public GameObject skillsMenu;
 	public GameObject skillsMenuContent;
@@ -42,6 +77,7 @@ public class battleController : MonoBehaviour
 	public GameObject[] playerTargetIcons;
 	public GameObject[] playerCanvases;
 	public Text[] playerText;
+	public GameObject[] originalEnemyParty;
 	public List<GameObject> enemyParty = new List<GameObject>();
 	public List<GameObject> enemyTargetIcons = new List<GameObject>();
 	public List<GameObject> enemyCanvases = new List<GameObject>();
@@ -54,6 +90,8 @@ public class battleController : MonoBehaviour
 	public GameObject[] playerItems;
 	Text[] itemText = new Text[2];
 	public GameObject[] targetsList;
+	public GameObject[] attackTargetsList;
+	public int numStandardSkills = 3;
 	public int numTargets;
 	public int numItems;
 	public int selectedSkill = -1;
@@ -61,6 +99,7 @@ public class battleController : MonoBehaviour
 	public int selectedItemNum;
 	public int selectedTarget = -1;
 	public int numPlayerCharas;
+	public int numAIs;
 	public int numEnemies;
 	public List<int> questEnemiesKilled = new List<int>();
 	public List<itemData> drops = new List<itemData>();
@@ -115,6 +154,30 @@ public class battleController : MonoBehaviour
 			defendTimerText.text = defendTimer.ToString("F");
 		}
 
+		if (fleeTimer > 0)
+		{
+			fleeTimer -= Time.smoothDeltaTime;
+			fleeTimerText.text = fleeTimer.ToString("F");
+		}
+		else if (fleeTimer < 0)
+		{
+			fleeTimer = 0;
+			fleeTimerText.text = fleeTimer.ToString("F");
+		}
+
+//		for (int i = 0; i < numPlayerCharas; i++)
+//		{
+//			for (int j = 0; j < )
+//			if (skillTimers[i] > 0)
+//			{
+//				skillTimers[i] -= Time.smoothDeltaTime;
+//			}
+//			else if (skillTimers[i] < 0)
+//			{
+//				skillTimers[i] = 0;
+//			}
+//		}
+
 		bool cancelButton = Input.GetButtonDown("Cancel");
 		if (cancelButton)
 		{
@@ -133,8 +196,18 @@ public class battleController : MonoBehaviour
 			}
 		}
 
-		if ((skillsMenu.activeInHierarchy && (selectedSkill > -1)) || 
-			(itemsMenu.activeInHierarchy && (selectedItem > -1)))
+		if (skillsMenu.activeInHierarchy && (selectedSkill > -1))
+		{
+			battleSkillController skillController = 
+				skillItems[selectedSkill].GetComponent<battleSkillController>();
+
+			if (skillController.skillTimer <= 0)
+			{
+				openTargetList();
+			}
+		}
+
+		if (itemsMenu.activeInHierarchy && (selectedItem > -1))//)
 		{
 			openTargetList();
 		}
@@ -145,10 +218,16 @@ public class battleController : MonoBehaviour
 			useItem();
 		}
 
-		if (targetMenu.activeInHierarchy && (selectedTarget > -1) &&
-			(selectedSkill > -1))
+		if (targetMenu.activeInHierarchy && (selectedTarget > -1))
 		{
-			useSkill();
+			if (selectedSkill > -1)
+			{
+				useSkill();
+			}
+			else
+			{
+				attackTarget();
+			}
 		}
 
 		if (battleMode)
@@ -160,24 +239,34 @@ public class battleController : MonoBehaviour
 
 	public void setupBattle(GameObject enemy)
 	{
+//		clearLists();
+
 		playerTargetIcons = new GameObject[3];
 		playerCanvases = new GameObject[3];
 		playerText = new Text[3];
 		playerItems = new GameObject[40];
 		playerCharaStatuses = new characterStatusController[3];
+
+//		skillTimers.Clear();
 		enemyParty.Clear();
 		questEnemiesKilled.Clear();
 		enemyCanvases.Clear();
 		enemyTargetIcons.Clear();
 		enemyStatuses.Clear();
 		enemyControllers.Clear();
+		drops.Clear();
 		dropsClaimed.Clear();
 		targets.Clear();
+		coinsWon = 0;
+		EXPEarned = 0;
+		skillPointsGained = 0;
 		skillsButton.interactable = true;
 		itemsButton.interactable = true;
 
 		numPlayerCharas = gameController.numCharasInParty;
 		playerParty = gameController.currentParty;
+		setBattleGrid();
+
 		for (int i = 0; i < numPlayerCharas; i++)
 		{
 			playerCharaStatuses[i] = playerParty[i].GetComponent<characterStatusController>();
@@ -187,15 +276,21 @@ public class battleController : MonoBehaviour
 			playerTargetIcons[i] = playerParty[i].transform.Find("targetCone").gameObject;
 			targets.Add(playerParty[i]);
 		}
+
 		if (numPlayerCharas > 1)
 		{
+			increaseCharaButton.SetActive(true);
+			decreaseCharaButton.SetActive(true);
 			positionPlayerParty();
 		}
 		loadCharaUI();
 		loadSkills();
 		loadItems();
 
-		enemy.transform.LookAt(playerParty[selectedCharacter].transform);
+		originalEnemyParty = enemy.GetComponent<enemyController>().enemyParty;
+		enemy.transform.position = battleGrid[17].position;
+		enemy.transform.rotation = battleGrid[17].rotation;
+		battleGridOccupancy[17] = true;
 		numEnemies = enemy.GetComponent<enemyController>().enemyParty.Length;
 		enemyParty.Add(enemy);
 		if (numEnemies > 1)
@@ -219,16 +314,125 @@ public class battleController : MonoBehaviour
 
 		battleMode = true;
 		battleMenu.SetActive(true);
+	}
 
-		drops.Clear();
-		coinsWon = 0;
-		EXPEarned = 0;
-		skillPointsGained = 0;
+	public void setBattleGrid()
+	{
+		battleGridMain.transform.position = playerParty[0].transform.position;
+		battleGridMain.transform.rotation = playerParty[0].transform.rotation;
+		battleGridOccupancy[24] = true;
+//		Vector2 charaStartPos = new Vector2(playerParty[0].transform.position.x, 
+//			playerParty[0].transform.position.z);
+//		Vector2 gridStartPos = new Vector2(charaStartPos.x - (gridWidth / 2), 
+//			charaStartPos.y - (gridHeight / 2));
+//		int counter = 0;
+//
+//		for (int i = 0; i < gridWidth; i++)
+//		{
+//			for (int j = 0; j < gridHeight; j++)
+//			{
+//				battleGridPos[i][j] = battleGrid[counter].position;
+//				counter++;
+//			}
+//		}
 	}
 
 	public void positionPlayerParty()
 	{
-		
+		for (int i = 1; i < numPlayerCharas; i++)
+		{
+			switch (i)
+			{
+				case 1:
+				{
+					playerParty[i].GetComponent<playerController>().enabled = true;
+					playerParty[i].GetComponent<Collider>().enabled = true;
+					playerParty[i].GetComponent<playerController>().isControllable = false;
+
+					if (playerCharaStatuses[i].inFrontLine)
+					{
+						playerParty[i].transform.position = battleGrid[23].position;
+						playerParty[i].transform.rotation = battleGrid[23].rotation;
+						battleGridOccupancy[23] = true;
+//								playerParty[0].transform.localPosition +
+//							new Vector3(2, 0, 0);
+					}
+					else
+					{
+						playerParty[i].transform.position = battleGrid[30].position;
+						playerParty[i].transform.rotation = battleGrid[30].rotation;
+						battleGridOccupancy[30] = true;
+//								playerParty[0].transform.localPosition +
+//							new Vector3(2, 0, -2);
+					}
+					break;
+				}
+				case 2:
+				{
+					playerParty[i].GetComponent<playerController>().enabled = true;
+					playerParty[i].GetComponent<Collider>().enabled = true;
+					playerParty[i].GetComponent<playerController>().isControllable = false;
+
+					if (playerCharaStatuses[i].inFrontLine)
+					{
+						playerParty[i].transform.position = battleGrid[25].position;
+						playerParty[i].transform.rotation = battleGrid[25].rotation;
+						battleGridOccupancy[25] = true;
+//								playerParty[0].transform.localPosition +
+//							new Vector3(0, -2, 0);
+					}
+					else
+					{
+						playerParty[i].transform.position = battleGrid[32].position;
+						playerParty[i].transform.rotation = battleGrid[32].rotation;
+						battleGridOccupancy[32] = true;
+//								playerParty[0].transform.localPosition +
+//							new Vector3(0, -2, -2);
+					}
+					break;
+				}
+			}
+//			currentCharacter.transform.position = spawnPoint.position;
+		}
+
+		for (int i = 0; i < numAIs; i++)
+		{
+//			switch (i)
+//			{
+//				case 1:
+//				{
+//					if (playerCharaStatuses[i].inFrontLine)
+//					{
+//						playerParty[i].transform.position = battleGrid[23].position;
+//								playerParty[0].transform.localPosition +
+//							new Vector3(2, 0, 0);
+//					}
+//					else
+//					{
+//						playerParty[i].transform.position = battleGrid[30].position;
+//								playerParty[0].transform.localPosition +
+//							new Vector3(2, 0, -2);
+//					}
+//					break;
+//				}
+//				case 2:
+//				{
+//					if (playerCharaStatuses[i].inFrontLine)
+//					{
+//						playerParty[i].transform.position = battleGrid[25].position;
+//								playerParty[0].transform.localPosition +
+//							new Vector3(0, -2, 0);
+//					}
+//					else
+//					{
+//						playerParty[i].transform.position = battleGrid[32].position;
+//								playerParty[0].transform.localPosition +
+//							new Vector3(0, -2, -2);
+//					}
+//					break;
+//				}
+//			}
+		}
 	}
 
 	public void spawnEnemies(GameObject enemy)
@@ -238,6 +442,62 @@ public class battleController : MonoBehaviour
 		{
 			monster = Instantiate(enemy.GetComponent<enemyController>().enemyParty[i]);
 			enemyParty.Add(monster);
+			monster.transform.SetParent(enemyContainer);
+
+			switch (i)
+			{
+				case 1:
+				{
+					monster.transform.position = battleGrid[16].position;
+					monster.transform.rotation = battleGrid[16].rotation;
+					battleGridOccupancy[16] = true;
+//							enemy.transform.localPosition +
+//						new Vector3(2, 0, 0);
+					break;
+				}
+				case 2:
+				{
+					monster.transform.position = battleGrid[18].position;
+					monster.transform.rotation = battleGrid[18].rotation;
+					battleGridOccupancy[18] = true;
+//							enemy.transform.localPosition +
+//						new Vector3(-2, 0, 0);
+					break;
+				}
+				case 3:
+				{
+					monster.transform.position = battleGrid[10].position;
+					monster.transform.rotation = battleGrid[10].rotation;
+					battleGridOccupancy[10] = true;
+//							enemy.transform.localPosition +
+//						new Vector3(0, 0, -2);
+					break;
+				}
+				case 4:
+				{
+					monster.transform.position = battleGrid[9].position;
+					monster.transform.rotation = battleGrid[9].rotation;
+					battleGridOccupancy[9] = true;
+//							enemy.transform.localPosition +
+//						new Vector3(2, 0, -2);
+					break;
+				}
+				case 5:
+				{
+					monster.transform.position = battleGrid[11].position;
+					monster.transform.rotation = battleGrid[11].rotation;
+					battleGridOccupancy[11] = true;
+//							enemy.transform.localPosition +
+//						new Vector3(-2, 0, -2);
+					break;
+				}
+//				case 6:
+//				{
+//					monster.transform.position = enemy.transform.localPosition +
+//						new Vector3(0, 0, 0);
+//					break;
+//				}
+			}
 		}
 	}
 
@@ -250,8 +510,10 @@ public class battleController : MonoBehaviour
 
 		attackTimer = playerCharaStatuses[selectedCharacter].skillTimers[0];
 		attackTimerText.text = attackTimer.ToString("F");
-		defendTimer = playerCharaStatuses[selectedCharacter].skillTimers[1];;
+		defendTimer = playerCharaStatuses[selectedCharacter].skillTimers[1];
 		defendTimerText.text = defendTimer.ToString("F");
+		fleeTimer = playerCharaStatuses[selectedCharacter].skillTimers[2];
+		fleeTimerText.text = fleeTimer.ToString("F");
 	}
 
 	public void loadSkills()
@@ -267,52 +529,65 @@ public class battleController : MonoBehaviour
 //		int numSkills = playerCharaStatuses[selectedCharacter].availSkills.Count;
 //		charaSkills = new skillData[numSkills];
 		charaSkills = playerCharaStatuses[selectedCharacter].availSkills.ToArray();
-		skillItems = new GameObject[charaSkills.Length - 2];
-		for (int i = 2; i < charaSkills.Length; i++)
-		{
-			skillItems[i - 2] = Instantiate(skillPrefab);
-			skillItems[i - 2].transform.SetParent(skillsMenuContent.transform, false);
-			skillItems[i - 2].name = charaSkills[i].skillName;
-			battleSkillController = skillItems[i - 2].GetComponent<battleSkillController>();
-			battleSkillController.battleController = this;
-			battleSkillController.skillID = charaSkills[i].skillID;
-			battleSkillController.skillIndex = i - 2;
-			battleSkillController.skillName = charaSkills[i].skillName;
-			battleSkillController.MPCost = charaSkills[i].MPCost;
-			if (battleSkillController.MPCost > playerCharaStatuses[selectedCharacter].currentMP)
-			{
-				skillItems[i - 2].GetComponent<Button>().interactable = false;
-			}
-			battleSkillController.rechargeTime = charaSkills[i].rechargeTime;
-			battleSkillController.castingTime = charaSkills[i].castingTime;
-			battleSkillController.skillTimer = playerCharaStatuses[selectedCharacter].skillTimers[i];
 
-			skillText = skillItems[i - 2].GetComponentsInChildren<Text>();
-			skillText[0].text = charaSkills[i].skillName + " (" + charaSkills[i].MPCost + ")";
-//			if (playerCharaStatuses[selectedCharacter].skillTimers.Count >= i)
-//			{
-//				skillText[1].text = playerCharaStatuses[selectedCharacter].skillTimers[i].ToString("F");
-//			}
-//			else
-//			{
-//				skillText[1].text = 0.ToString("F");
-//			}
-		}
-
-		if (charaSkills.Length < 3)
+		if (charaSkills.Length < numStandardSkills)
 		{
 			skillsButton.interactable = false;
+		}
+		else
+		{
+			skillItems = new GameObject[charaSkills.Length - numStandardSkills];
+//			skillTimers[0] = charaSkills.Length - 2;
+//			Debug.Log("loadSkills line 488, charaSkills length = " + 
+//					charaSkills.Length);
+
+			// all playerCharacters have attack, defend, flee as their 1st 3 skills
+			for (int i = numStandardSkills; i < charaSkills.Length; i++)
+			{
+				skillItems[i - numStandardSkills] = Instantiate(skillPrefab);
+				skillItems[i - numStandardSkills].transform.SetParent(skillsMenuContent.transform, false);
+				skillItems[i - numStandardSkills].name = charaSkills[i].skillName;
+				battleSkillController = skillItems[i - numStandardSkills].GetComponent<battleSkillController>();
+				battleSkillController.battleController = this;
+				battleSkillController.skillID = charaSkills[i].skillID;
+				battleSkillController.skillIndex = i - numStandardSkills;
+				battleSkillController.skillName = charaSkills[i].skillName;
+				battleSkillController.MPCost = charaSkills[i].MPCost;
+//				Debug.Log("loadSkills line 502, i = " + i);
+				if (battleSkillController.MPCost > playerCharaStatuses[selectedCharacter].currentMP)
+				{
+					skillItems[i - numStandardSkills].GetComponent<Button>().interactable = false;
+				}
+				battleSkillController.rechargeTime = charaSkills[i].rechargeTime;
+				battleSkillController.castingTime = charaSkills[i].castingTime;
+				battleSkillController.skillTimer = playerCharaStatuses[selectedCharacter].skillTimers[i];
+//				Debug.Log("loadSkills line 510, i = " + i);
+				skillText = skillItems[i - numStandardSkills].GetComponentsInChildren<Text>();
+				skillText[0].text = charaSkills[i].skillName + " (" + charaSkills[i].MPCost + ")";
+//				if (playerCharaStatuses[selectedCharacter].skillTimers.Count >= i)
+//				{
+//					skillText[1].text = playerCharaStatuses[selectedCharacter].skillTimers[i].ToString("F");
+//				}
+//				else
+//				{
+//					skillText[1].text = 0.ToString("F");
+//				}
+			}
 		}
 	}
 
 	public void loadItems()
 	{
-//		for (int i = numItems; i > 0; i--)
-//		{
-//			Destroy(playerItems[i]);
-//			numItems--;
-//		}
-//		numItems = 0;
+		if (numItems > 0)
+		{
+			for (int i = numItems - 1; i >= 0; i--)
+			{
+				Destroy(playerItems[i]);
+				numItems--;
+			}
+			numItems = 0;
+		}
+
 		for (int i = 0; i < inventoryController.numItemsPtInventory; i++)
 		{
 //			Debug.Log("item# " + i + ", name: " + inventoryController.partyInventory[i].name
@@ -359,6 +634,8 @@ public class battleController : MonoBehaviour
 
 	public void loadTargets()
 	{
+//		clearTargetList();
+
 		for (int i = 0; i < targets.Count; i++)
 		{
 			targetsList[i] = Instantiate(targetPrefab) as GameObject;
@@ -373,6 +650,18 @@ public class battleController : MonoBehaviour
 			targetsText = targetsList[i].GetComponentsInChildren<Text>();
 			targetsText[0].text = targetsList[i].name;
 		}
+
+		numTargets = targets.Count;
+	}
+
+	public void setDefaultAction()
+	{
+		
+	}
+
+	public void useDefaultAction()
+	{
+		
 	}
 
 	public void playerAttack()
@@ -380,9 +669,9 @@ public class battleController : MonoBehaviour
 		if (!skillsMenu.activeInHierarchy && !itemsMenu.activeInHierarchy && 
 			!targetMenu.activeInHierarchy && attackTimer <= 0)
 		{
-			if (numEnemies > 1)
+			if (numTargets > 2)
 			{
-				selectedSkill = 0;
+//				selectedSkill = 0;
 				openTargetList();
 			}
 			else
@@ -390,6 +679,7 @@ public class battleController : MonoBehaviour
 				enemyStatuses[0].calculateDamage(charaSkills[0], 
 					playerParty[selectedCharacter]);
 				attackTimer = charaSkills[0].rechargeTime;
+				defendTimer = charaSkills[0].rechargeTime;
 			}
 		}
 	}
@@ -400,6 +690,29 @@ public class battleController : MonoBehaviour
 			!targetMenu.activeInHierarchy && defendTimer <= 0)
 		{
 			playerCharaStatuses[selectedCharacter].useSkill(charaSkills[1]);
+			attackTimer = charaSkills[1].rechargeTime;
+			defendTimer = charaSkills[1].rechargeTime;
+		}
+	}
+
+	public void flee()
+	{
+		if (!skillsMenu.activeInHierarchy && !itemsMenu.activeInHierarchy && 
+			!targetMenu.activeInHierarchy && fleeTimer <= 0)
+		{
+			int fleeSuccess = 0;
+			fleeSuccess = Random.Range(1, 101);
+			int fleeRate = 
+				playerCharaStatuses[selectedCharacter].availSkills[2].successRate;
+
+			if (fleeSuccess > fleeRate)
+			{
+				fleeBattle();
+			}
+			else
+			{
+				fleeTimer = charaSkills[2].rechargeTime;
+			}
 		}
 	}
 
@@ -409,15 +722,21 @@ public class battleController : MonoBehaviour
 		{
 			skillsMenu.SetActive(true);
 
-			for (int i = 2; i < charaSkills.Length; i++)
+			for (int i = numStandardSkills; i < charaSkills.Length; i++)
 			{	
 				if (charaSkills[i].MPCost > playerCharaStatuses[selectedCharacter].currentMP)
 				{
-					skillItems[i - 2].GetComponent<Button>().interactable = false;
+					skillItems[i - numStandardSkills].GetComponent<Button>().interactable = false;
 				}
 				else
 				{
-					skillItems[i - 2].GetComponent<Button>().interactable = true;
+					skillItems[i - numStandardSkills].GetComponent<Button>().interactable = true;
+					battleSkillController = skillItems[i - 
+						numStandardSkills].GetComponent<battleSkillController>();
+					battleSkillController.skillTimer = 
+						playerCharaStatuses[selectedCharacter].skillTimers[i];
+					battleSkillController.skillTimerText.text = 
+						battleSkillController.skillTimer.ToString("F");
 				}
 			}
 		}
@@ -434,16 +753,21 @@ public class battleController : MonoBehaviour
 
 	public void openTargetList()
 	{
-//		if (numTargets > 0)
-//		{
-//			for (int i = numTargets; i > 0; i--)
-//			{
-//				Destroy(targetsList[i]);
-//				numTargets--;
-//			}
-//		}
-//		loadTargets();
 		targetMenu.SetActive(true);
+		clearTargetList();
+		loadTargets();
+	}
+
+	public void attackTarget()
+	{
+		GameObject target = targets[selectedTarget];
+		characterStatusController targetStatus = 
+			target.GetComponent<characterStatusController>();
+
+		targetStatus.calculateDamage(charaSkills[0], playerParty[selectedCharacter]);
+		attackTimer = charaSkills[0].rechargeTime;
+		targetMenu.SetActive(false);
+		selectedTarget = -1;
 	}
 
 	public void useItem()
@@ -481,26 +805,38 @@ public class battleController : MonoBehaviour
 
 	public void useSkill()
 	{
-		skillData skill = charaSkills[selectedSkill + 2];
-		GameObject target = targets[selectedTarget];
-		characterStatusController targetStatus = target.GetComponent<characterStatusController>();
 		battleSkillController skillController = 
-		skillItems[selectedSkill].GetComponent<battleSkillController>();
-		skillController.skillTimer = skillController.rechargeTime + skillController.castingTime;
-		playerCharaStatuses[selectedCharacter].currentMP -= skill.MPCost;
+			skillItems[selectedSkill].GetComponent<battleSkillController>();
 
-		targetStatus.calculateDamage(skill, playerParty[selectedCharacter]);
+		if (skillController.skillTimer <= 0)
+		{
+//			if (selectedSkill > 2)
+			{
+				skillData skill = charaSkills[selectedSkill + numStandardSkills];
+				GameObject target = targets[selectedTarget];
+				characterStatusController targetStatus = target.GetComponent<characterStatusController>();
+				skillController.skillTimer = skillController.rechargeTime + skillController.castingTime;
+				playerCharaStatuses[selectedCharacter].currentMP -= skill.MPCost;
+				playerCharaStatuses[selectedCharacter].skillTimers[selectedSkill + 
+					numStandardSkills] = skillController.skillTimer;
+				attackTimer = charaSkills[selectedSkill + numStandardSkills].castingTime;
+				defendTimer = charaSkills[selectedSkill + numStandardSkills].castingTime;
+
+				targetStatus.calculateDamage(skill, playerParty[selectedCharacter]);
+
+				skillsMenu.SetActive(false);
+			}
+		}
 
 		targetMenu.SetActive(false);
-		skillsMenu.SetActive(false);
 		selectedSkill = -1;
 		selectedTarget = -1;
 	}
 
-	public void selectTarget()
-	{
-		
-	}
+//	public void selectTarget()
+//	{
+//		
+//	}
 
 	public void killCharacter(GameObject chara)
 	{
@@ -537,22 +873,28 @@ public class battleController : MonoBehaviour
 		skillPointsGained += enemy.skillPointValue;
 		determineDrops(enemy);
 
-		foreach (GameObject target in targetsList)
-		{
-			Destroy(target);
-		}
-		numTargets = 0;
 		targets.Remove(enemy.gameObject);
+		clearTargetList();
+//		foreach (GameObject target in targetsList)
+//		{
+//			Destroy(target);
+//		}
+//		numTargets = 0;
 		Destroy(enemyParty[enemyIndex]);
 		enemyParty.RemoveAt(enemyIndex);
+		enemyStatuses.RemoveAt(enemyIndex);
+		enemyControllers.RemoveAt(enemyIndex);
+		enemyCanvases.RemoveAt(enemyIndex);
 		numEnemies--;
 
 		if (numEnemies == 0)
 		{
 			endBattle();
 		}
-
-		loadTargets();
+		else
+		{
+			loadTargets();
+		}
 	}
 
 	public void killPlayerChara(int playerCharaIndex)
@@ -578,6 +920,7 @@ public class battleController : MonoBehaviour
 			if (random <= enemy.dropRates[i])
 			{
 				drops.Add(enemy.drops[i]);
+//				Debug.Log("dropped: " + enemy.drops[i].ToString());
 			}
 		}
 	}
@@ -608,6 +951,8 @@ public class battleController : MonoBehaviour
 			}
 		}
 
+		increaseCharaButton.SetActive(false);
+		decreaseCharaButton.SetActive(false);
 		targetMenu.SetActive(false);
 		skillsMenu.SetActive(false);
 		itemsMenu.SetActive(false);
@@ -697,6 +1042,7 @@ public class battleController : MonoBehaviour
 		inventoryController.coinsText.text = "Coins: " + inventoryController.coins;
 
 		battleMode = false;
+		clearDrops();
 		levelUpAnnouncement.SetActive(false);
 		winScreen.SetActive(false);
 		gameController.endBattle();
@@ -712,13 +1058,128 @@ public class battleController : MonoBehaviour
 		inventoryController.coinsText.text = "Coins: " + inventoryController.coins;
 
 		battleMode = false;
+		clearDrops();
 		levelUpAnnouncement.SetActive(false);
 		winScreen.SetActive(false);
 		gameController.endBattle();
 	}
 
+/*	public void clearLists()
+	{
+		int numChildren = 0;
+
+		numChildren = skillsMenuContent.transform.childCount;
+//		Debug.Log("numSkills: " + numChildren);
+		if (numChildren > 0)
+		{
+			for (int i = numChildren - 1; i >= 0; i--)
+			{
+				Destroy(skillsMenuContent.transform.GetChild(i));
+			}
+		}
+
+		numChildren = itemsMenuContent.transform.childCount;
+//		Debug.Log("numItems: " + numChildren);
+		if (numChildren > 0)
+		{
+			for (int i = numChildren - 1; i >= 0; i--)
+			{
+				Destroy(itemsMenuContent.transform.GetChild(i));
+	//			playerItems[i];
+			}
+			numItems = 0;
+		}
+
+		numChildren = targetMenuContent.transform.childCount;
+//		Debug.Log("numTargets: " + numChildren);
+		if (numChildren > 0)
+		{
+			for (int i = numChildren - 1; i >= 0; i--)
+			{
+				Destroy(targetMenuContent.transform.GetChild(i));
+			}
+			numTargets = 0;
+		}
+
+//		numChildren = dropListContent.transform.childCount;
+////		Debug.Log("numDrops: " + numChildren);
+//		if (numChildren > 0)
+//		{
+//			for (int i = numChildren - 1; i >= 0; i--)
+//			{
+//				Destroy(dropListContent.transform.GetChild(i));
+//			}
+//		}
+	}*/
+
+	public void clearTargetList()
+	{
+		if (numTargets > 0)
+		{
+			for (int i = numTargets - 1; i >= 0; i--)
+			{
+				Destroy(targetsList[i]);
+			}
+			numTargets = 0;
+		}
+	}
+
+	public void clearDrops()
+	{
+		for (int i = dropList.Length - 1; i >= 0; i--)
+		{
+			Destroy(dropList[i]);
+		}
+		drops.Clear();
+	}
+
+	public void fleeBattle()
+	{
+		for (int i = 1; i < numPlayerCharas; i++)
+		{
+			
+		}
+
+		for (int i = 0; i < numAIs; i++)
+		{
+			
+		}
+
+		bool originalEnemyReset = false;
+		for (int i = 0; i < numEnemies; i++)
+		{
+			if (enemyParty[i] != originalEnemyParty[0])
+			{
+				Destroy(enemyParty[i]);
+			}
+			else
+			{
+				enemyStatuses[i].currentHP = enemyStatuses[i].maxHP;
+				originalEnemyReset = true;
+			}
+		}
+		if (!originalEnemyReset)
+		{
+			GameObject monster = 
+				Instantiate(originalEnemyParty[0].GetComponent<enemyController>().enemyParty[0]);
+			monster.transform.SetParent(enemyContainer);
+			monster.transform.position = battleGrid[17].position;
+		}
+
+		increaseCharaButton.SetActive(false);
+		decreaseCharaButton.SetActive(false);
+		targetMenu.SetActive(false);
+		skillsMenu.SetActive(false);
+		itemsMenu.SetActive(false);
+		battleMenu.SetActive(false);
+		gameController.endBattle();
+	}
+
 	public void loseBattle()
 	{
+//		clearLists();
+		increaseCharaButton.SetActive(false);
+		decreaseCharaButton.SetActive(false);
 		targetMenu.SetActive(false);
 		skillsMenu.SetActive(false);
 		itemsMenu.SetActive(false);

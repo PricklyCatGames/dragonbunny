@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using System.Collections;
 
-public class battleDropController : MonoBehaviour, ISelectHandler, IDeselectHandler
+public class battleDropController : MonoBehaviour, ISelectHandler //, IDeselectHandler
 {
 	#region variables
 	public battleController battleController;
@@ -53,8 +53,8 @@ public class battleDropController : MonoBehaviour, ISelectHandler, IDeselectHand
 //		dropItemCone.SetActive(true);
 	}
 
-	public void OnDeselect (BaseEventData data)
-	{
+//	public void OnDeselect (BaseEventData data)
+//	{
 //		dropItemCone.SetActive(false);
-	}
+//	}
 }

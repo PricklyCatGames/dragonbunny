@@ -69,6 +69,8 @@ public class inventoryMenuController : MonoBehaviour
 	{
 		closeMenu();
 		keyItemList.SetActive(true);
+		gameController.menuDepth = 3;
+//		Debug.Log("(inventory 73)menuDepth = " + gameController.menuDepth);
 		numKeyItems = inventoryController.keyItemsObtained;
 		keyItems = new GameObject[numKeyItems];
 		itemPos = initialKeyItemPos.position;
@@ -105,6 +107,8 @@ public class inventoryMenuController : MonoBehaviour
 		inventoryPanel.SetActive(true);
 		descriptionPanel.SetActive(true);
 		itemMenu.SetActive(true);
+		gameController.menuDepth = 3;
+//		Debug.Log("(inventory 111)menuDepth = " + gameController.menuDepth);
 		numItemsPtInventory = inventoryController.numItemsPtInventory;
 		partyInventory = new GameObject[numItemsPtInventory];
 		itemPos = initialItemPos.position;
@@ -158,6 +162,8 @@ public class inventoryMenuController : MonoBehaviour
 		closeMenu();
 		storagePanel.SetActive(true);
 		descriptionPanel.SetActive(true);
+		gameController.menuDepth = 3;
+//		Debug.Log("(inventory 166)menuDepth = " + gameController.menuDepth);
 		numItemsStorage = inventoryController.numItemsStorage;
 		storage = new GameObject[numItemsStorage];
 		itemPos = initialItemPos.position;
@@ -269,17 +275,23 @@ public class inventoryMenuController : MonoBehaviour
 	public void openCharaSelectMenu()
 	{
 		characterSelectMenu.SetActive(true);
+		gameController.menuDepth = 4;
+//		Debug.Log("(inventory 279)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void closeCharaSelectMenu()
 	{
 		characterSelectMenu.SetActive(false);
+		gameController.menuDepth = 3;
+//		Debug.Log("(inventory 286)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void openSelectAmountMenu()
 	{
 		selectAmountMenu.SetActive(true);
 		selectedAmount = 1;
+		gameController.menuDepth = 4;
+//		Debug.Log("(inventory 294)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void increaseSelectedAmt()
@@ -316,12 +328,15 @@ public class inventoryMenuController : MonoBehaviour
 		inventoryController.confirmDiscard();
 		selectAmountMenu.SetActive(false);
 		updateList();
+		gameController.menuDepth = 3;
 	}
 
 	public void cancelSelectAmount()
 	{
 		inventoryController.selectedAmount = 0;
 		selectAmountMenu.SetActive(false);
+		gameController.menuDepth = 3;
+//		Debug.Log("(inventory 338)menuDepth = " + gameController.menuDepth);
 	}
 
 	public void closeMenu()
@@ -357,5 +372,7 @@ public class inventoryMenuController : MonoBehaviour
 		storagePanel.SetActive(false);
 		descriptionPanel.SetActive(false);
 		itemMenu.SetActive(false);
+		gameController.menuDepth = 2;
+//		Debug.Log("(inventory 375)menuDepth = " + gameController.menuDepth);
 	}
 }

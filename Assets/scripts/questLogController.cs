@@ -22,13 +22,13 @@ public class questLogController : MonoBehaviour
 	public int EXPReward;
 //	public 
 
-	questManager questManager;
+//	questManager questManager;
 	#endregion
 
 	// Use this for initialization
 	void Start()
 	{
-		questManager = GameObject.Find("gameController").GetComponent<questManager>();
+//		questManager = GameObject.Find("gameController").GetComponent<questManager>();
 	}
 	
 	// Update is called once per frame
