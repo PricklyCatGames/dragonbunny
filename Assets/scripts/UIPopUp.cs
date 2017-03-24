@@ -24,15 +24,6 @@ public class UIPopUp : MonoBehaviour {
 
 	public void DisplayUIPopUp()
 	{
-		var mousePos = new Vector2(Input.mousePosition.x + 100f, Input.mousePosition.y - 110f);
-
-		if(mousePos.y <= 120f)
-		{
-			mousePos = new Vector2(mousePos.x, 120f);
-		}
-
-		popupObject.GetComponent<RectTransform>().position = mousePos;
-
 		popupObject.GetComponent<CanvasGroup>().alpha = 1;
 		popupObject.GetComponent<CanvasGroup>().interactable = true;
 		popupObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
