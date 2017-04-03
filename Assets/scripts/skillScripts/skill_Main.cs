@@ -41,10 +41,13 @@ namespace Skills
 		public UIPopUp uiPopUp;
 		#endregion
 
+		gameController gameContr;
+
 		void Awake()
 		{
 			// TODO Check to see if we have a saved skill set already. If not, then intialize.
 			initializeSkillTrails();
+			gameContr = GameObject.Find("gameController").GetComponent<gameController>();
 		}
 
 		public void initializeSkillTrails()
@@ -182,6 +185,8 @@ namespace Skills
 			selCol.highlightedColor = selectedCol;
 			currSkillObj.GetComponent<Button>().colors = selCol;
 
+			gameContr.menuDepth = 4;
+
 			uiPopUp.DisplayUIPopUp();
 		}
 
@@ -215,8 +220,17 @@ namespace Skills
 
 				learnSkill.interactable = false;
 
+				gameContr.menuDepth = 3;
+
 				uiPopUp.HideUIPopUp();
 			}
+		}
+
+		public void closeSkillNode()
+		{
+			gameContr.menuDepth = 3;
+
+			uiPopUp.HideUIPopUp();
 		}
 
 		/// <summary>
