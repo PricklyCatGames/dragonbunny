@@ -15,6 +15,7 @@ public class characterStatusController : MonoBehaviour
 	public bool isEnemy;
 	public bool isAvailable;
 	public bool inParty;
+	public bool isDead;
 	public bool isControllable;
 	public bool inFrontLine;
 	public bool isRightHanded;

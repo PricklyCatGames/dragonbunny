@@ -1,0 +1,1200 @@
+fileFormatVersion: 2
+guid: 2225eef83e5b743d19e6ca6f35b16863
+timeCreated: 1490733559
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bush branch006
+    100002: flower
+    100004: flower001
+    100006: flower002
+    100008: flower003
+    100010: flower004
+    100012: flower005
+    100014: flower006
+    100016: flower007
+    100018: flower008
+    100020: flower009
+    100022: Flowerstem006
+    100024: Flowerstem007
+    100026: Flowerstem008
+    100028: Flowerstem009
+    100030: Flowerstem010
+    100032: grass bunch
+    100034: grass flower bunch
+    100036: grass straight small
+    100038: grass straight small001
+    100040: grass straight small002
+    100042: grass straight small003
+    100044: grass straight small004
+    100046: grass straight small005
+    100048: grass straight small006
+    100050: grass straight small007
+    100052: grass straight small008
+    100054: grass straight small009
+    100056: grass straight small010
+    100058: grass straight small011
+    100060: grass straight small012
+    100062: grass straight small013
+    100064: grass straight small014
+    100066: grass straight small015
+    100068: grass straight small016
+    100070: grass straight small017
+    100072: grass straight small018
+    100074: grass straight small019
+    100076: grass straight small020
+    100078: grass straight small021
+    100080: grass straight small022
+    100082: grass straight small023
+    100084: grass straight small024
+    100086: grass straight small025
+    100088: grass straight small026
+    100090: grass straight small027
+    100092: grass straight small028
+    100094: grass straight small029
+    100096: grass straight small030
+    100098: grass straight small031
+    100100: grass straight small032
+    100102: grass straight small033
+    100104: grass straight small034
+    100106: grass straight small035
+    100108: grass straight small036
+    100110: grass straight small037
+    100112: grass straight small038
+    100114: grass straight small039
+    100116: grass straight small040
+    100118: grass straight small041
+    100120: grass straight small042
+    100122: grass straight small044
+    100124: grass straight small046
+    100126: grass straight small049
+    100128: grass straight small052
+    100130: grass straight small053
+    100132: grass straight small054
+    100134: grass straight small055
+    100136: grass straight small056
+    100138: grass straight small058
+    100140: grass straight small059
+    100142: grass straight small060
+    100144: grass straight small062
+    100146: grass straight small063
+    100148: grass straight small064
+    100150: grass straight small065
+    100152: grass straight small066
+    100154: grass straight small067
+    100156: grass straight small068
+    100158: grass straight small069
+    100160: grass straight small070
+    100162: grass straight small071
+    100164: grass straight small072
+    100166: grass straight small073
+    100168: grass straight small074
+    100170: grass straight small075
+    100172: grass straight small076
+    100174: grass straight small077
+    100176: grass straight small078
+    100178: grass straight small079
+    100180: grass straight small080
+    100182: grass straight small081
+    100184: grass straight small082
+    100186: grass straight small083
+    100188: grass straight small084
+    100190: grass straight small085
+    100192: grass straight small086
+    100194: grass straight small087
+    100196: grass straight small088
+    100198: grass straight small089
+    100200: grass straight small090
+    100202: grass straight small091
+    100204: grass straight small092
+    100206: grass straight small093
+    100208: grass straight small094
+    100210: grass straight small095
+    100212: grass straight small096
+    100214: grass straight small097
+    100216: grass straight small098
+    100218: grass straight small099
+    100220: grass straight small100
+    100222: grass straight small101
+    100224: grass straight small102
+    100226: grass straight small103
+    100228: grass straight small104
+    100230: grass straight small105
+    100232: grass straight small106
+    100234: grass straight small107
+    100236: grass straight small108
+    100238: grass straight small109
+    100240: grass straight small110
+    100242: grass straight small111
+    100244: grass straight small112
+    100246: grass straight small113
+    100248: grass straight small114
+    100250: grass straight small115
+    100252: grass straight small116
+    100254: grass straight small117
+    100256: grass straight small118
+    100258: grass straight small119
+    100260: grass straight small120
+    100262: grass straight small121
+    100264: grass straight small122
+    100266: grass straight small123
+    100268: grass straight small124
+    100270: grass straight small125
+    100272: grass straight small126
+    100274: grass straight small127
+    100276: grass straight small128
+    100278: grass straight small129
+    100280: grass straight small130
+    100282: grass straight small131
+    100284: grass straight small132
+    100286: grass straight small133
+    100288: grass straight small134
+    100290: grass straight small135
+    100292: grass straight small136
+    100294: grass straight small137
+    100296: grass straight small138
+    100298: grass straight small139
+    100300: grass straight small140
+    100302: grass straight small141
+    100304: grass straight small142
+    100306: grass straight small143
+    100308: grass straight small144
+    100310: grass straight small145
+    100312: grass straight small146
+    100314: grass straight small147
+    100316: grass straight small148
+    100318: grass straight small149
+    100320: grass straight small150
+    100322: grass straight small151
+    100324: grass straight small152
+    100326: grass straight small153
+    100328: grass straight small154
+    100330: grass straight small155
+    100332: grass straight small156
+    100334: grass straight small157
+    100336: grass straight small158
+    100338: grass straight small159
+    100340: grass straight small160
+    100342: grass straight small161
+    100344: grass straight small162
+    100346: grass straight small163
+    100348: //RootNode
+    100350: Plane002
+    100352: Plane003
+    100354: Plane004
+    100356: Plane005
+    100358: Plane006
+    100360: Plane007
+    100362: Plane008
+    100364: Plane009
+    100366: Plane010
+    100368: Plane011
+    100370: Plane012
+    100372: Plane013
+    100374: Plane014
+    100376: Plane015
+    100378: Plane016
+    100380: stigma001
+    100382: stigma002
+    100384: stigma003
+    100386: stigma004
+    100388: stigma005
+    100390: stigma006
+    100392: stigma007
+    100394: stigma008
+    100396: stigma009
+    100398: stigma010
+    100400: stigma011
+    100402: stigma012
+    100404: stigma013
+    100406: stigma014
+    100408: stigma015
+    100410: stigma016
+    100412: stigma017
+    100414: stigma018
+    100416: stigma019
+    100418: stigma020
+    100420: stigma021
+    100422: stigma022
+    100424: stigma023
+    100426: stigma024
+    100428: stigma025
+    100430: stigma026
+    100432: stigma027
+    100434: stigma028
+    100436: stigma029
+    100438: stigma030
+    100440: stigma031
+    100442: stigma032
+    100444: stigma033
+    100446: stigma034
+    100448: stigma035
+    100450: stigma036
+    100452: stigma037
+    100454: stigma038
+    100456: stigma039
+    100458: stigma040
+    400000: bush branch006
+    400002: flower
+    400004: flower001
+    400006: flower002
+    400008: flower003
+    400010: flower004
+    400012: flower005
+    400014: flower006
+    400016: flower007
+    400018: flower008
+    400020: flower009
+    400022: Flowerstem006
+    400024: Flowerstem007
+    400026: Flowerstem008
+    400028: Flowerstem009
+    400030: Flowerstem010
+    400032: grass bunch
+    400034: grass flower bunch
+    400036: grass straight small
+    400038: grass straight small001
+    400040: grass straight small002
+    400042: grass straight small003
+    400044: grass straight small004
+    400046: grass straight small005
+    400048: grass straight small006
+    400050: grass straight small007
+    400052: grass straight small008
+    400054: grass straight small009
+    400056: grass straight small010
+    400058: grass straight small011
+    400060: grass straight small012
+    400062: grass straight small013
+    400064: grass straight small014
+    400066: grass straight small015
+    400068: grass straight small016
+    400070: grass straight small017
+    400072: grass straight small018
+    400074: grass straight small019
+    400076: grass straight small020
+    400078: grass straight small021
+    400080: grass straight small022
+    400082: grass straight small023
+    400084: grass straight small024
+    400086: grass straight small025
+    400088: grass straight small026
+    400090: grass straight small027
+    400092: grass straight small028
+    400094: grass straight small029
+    400096: grass straight small030
+    400098: grass straight small031
+    400100: grass straight small032
+    400102: grass straight small033
+    400104: grass straight small034
+    400106: grass straight small035
+    400108: grass straight small036
+    400110: grass straight small037
+    400112: grass straight small038
+    400114: grass straight small039
+    400116: grass straight small040
+    400118: grass straight small041
+    400120: grass straight small042
+    400122: grass straight small044
+    400124: grass straight small046
+    400126: grass straight small049
+    400128: grass straight small052
+    400130: grass straight small053
+    400132: grass straight small054
+    400134: grass straight small055
+    400136: grass straight small056
+    400138: grass straight small058
+    400140: grass straight small059
+    400142: grass straight small060
+    400144: grass straight small062
+    400146: grass straight small063
+    400148: grass straight small064
+    400150: grass straight small065
+    400152: grass straight small066
+    400154: grass straight small067
+    400156: grass straight small068
+    400158: grass straight small069
+    400160: grass straight small070
+    400162: grass straight small071
+    400164: grass straight small072
+    400166: grass straight small073
+    400168: grass straight small074
+    400170: grass straight small075
+    400172: grass straight small076
+    400174: grass straight small077
+    400176: grass straight small078
+    400178: grass straight small079
+    400180: grass straight small080
+    400182: grass straight small081
+    400184: grass straight small082
+    400186: grass straight small083
+    400188: grass straight small084
+    400190: grass straight small085
+    400192: grass straight small086
+    400194: grass straight small087
+    400196: grass straight small088
+    400198: grass straight small089
+    400200: grass straight small090
+    400202: grass straight small091
+    400204: grass straight small092
+    400206: grass straight small093
+    400208: grass straight small094
+    400210: grass straight small095
+    400212: grass straight small096
+    400214: grass straight small097
+    400216: grass straight small098
+    400218: grass straight small099
+    400220: grass straight small100
+    400222: grass straight small101
+    400224: grass straight small102
+    400226: grass straight small103
+    400228: grass straight small104
+    400230: grass straight small105
+    400232: grass straight small106
+    400234: grass straight small107
+    400236: grass straight small108
+    400238: grass straight small109
+    400240: grass straight small110
+    400242: grass straight small111
+    400244: grass straight small112
+    400246: grass straight small113
+    400248: grass straight small114
+    400250: grass straight small115
+    400252: grass straight small116
+    400254: grass straight small117
+    400256: grass straight small118
+    400258: grass straight small119
+    400260: grass straight small120
+    400262: grass straight small121
+    400264: grass straight small122
+    400266: grass straight small123
+    400268: grass straight small124
+    400270: grass straight small125
+    400272: grass straight small126
+    400274: grass straight small127
+    400276: grass straight small128
+    400278: grass straight small129
+    400280: grass straight small130
+    400282: grass straight small131
+    400284: grass straight small132
+    400286: grass straight small133
+    400288: grass straight small134
+    400290: grass straight small135
+    400292: grass straight small136
+    400294: grass straight small137
+    400296: grass straight small138
+    400298: grass straight small139
+    400300: grass straight small140
+    400302: grass straight small141
+    400304: grass straight small142
+    400306: grass straight small143
+    400308: grass straight small144
+    400310: grass straight small145
+    400312: grass straight small146
+    400314: grass straight small147
+    400316: grass straight small148
+    400318: grass straight small149
+    400320: grass straight small150
+    400322: grass straight small151
+    400324: grass straight small152
+    400326: grass straight small153
+    400328: grass straight small154
+    400330: grass straight small155
+    400332: grass straight small156
+    400334: grass straight small157
+    400336: grass straight small158
+    400338: grass straight small159
+    400340: grass straight small160
+    400342: grass straight small161
+    400344: grass straight small162
+    400346: grass straight small163
+    400348: //RootNode
+    400350: Plane002
+    400352: Plane003
+    400354: Plane004
+    400356: Plane005
+    400358: Plane006
+    400360: Plane007
+    400362: Plane008
+    400364: Plane009
+    400366: Plane010
+    400368: Plane011
+    400370: Plane012
+    400372: Plane013
+    400374: Plane014
+    400376: Plane015
+    400378: Plane016
+    400380: stigma001
+    400382: stigma002
+    400384: stigma003
+    400386: stigma004
+    400388: stigma005
+    400390: stigma006
+    400392: stigma007
+    400394: stigma008
+    400396: stigma009
+    400398: stigma010
+    400400: stigma011
+    400402: stigma012
+    400404: stigma013
+    400406: stigma014
+    400408: stigma015
+    400410: stigma016
+    400412: stigma017
+    400414: stigma018
+    400416: stigma019
+    400418: stigma020
+    400420: stigma021
+    400422: stigma022
+    400424: stigma023
+    400426: stigma024
+    400428: stigma025
+    400430: stigma026
+    400432: stigma027
+    400434: stigma028
+    400436: stigma029
+    400438: stigma030
+    400440: stigma031
+    400442: stigma032
+    400444: stigma033
+    400446: stigma034
+    400448: stigma035
+    400450: stigma036
+    400452: stigma037
+    400454: stigma038
+    400456: stigma039
+    400458: stigma040
+    2300000: flower001
+    2300002: flower003
+    2300004: flower005
+    2300006: flower006
+    2300008: flower009
+    2300010: Flowerstem006
+    2300012: Flowerstem007
+    2300014: Flowerstem008
+    2300016: Flowerstem009
+    2300018: Flowerstem010
+    2300020: grass straight small
+    2300022: grass straight small001
+    2300024: grass straight small002
+    2300026: grass straight small003
+    2300028: grass straight small004
+    2300030: grass straight small005
+    2300032: grass straight small006
+    2300034: grass straight small007
+    2300036: grass straight small008
+    2300038: grass straight small009
+    2300040: grass straight small010
+    2300042: grass straight small011
+    2300044: grass straight small012
+    2300046: grass straight small013
+    2300048: grass straight small014
+    2300050: grass straight small015
+    2300052: grass straight small016
+    2300054: grass straight small017
+    2300056: grass straight small018
+    2300058: grass straight small019
+    2300060: grass straight small020
+    2300062: grass straight small021
+    2300064: grass straight small022
+    2300066: grass straight small023
+    2300068: grass straight small024
+    2300070: grass straight small025
+    2300072: grass straight small026
+    2300074: grass straight small027
+    2300076: grass straight small028
+    2300078: grass straight small029
+    2300080: grass straight small030
+    2300082: grass straight small031
+    2300084: grass straight small032
+    2300086: grass straight small033
+    2300088: grass straight small034
+    2300090: grass straight small035
+    2300092: grass straight small036
+    2300094: grass straight small037
+    2300096: grass straight small038
+    2300098: grass straight small039
+    2300100: grass straight small040
+    2300102: grass straight small041
+    2300104: grass straight small042
+    2300106: grass straight small044
+    2300108: grass straight small046
+    2300110: grass straight small049
+    2300112: grass straight small052
+    2300114: grass straight small053
+    2300116: grass straight small054
+    2300118: grass straight small055
+    2300120: grass straight small056
+    2300122: grass straight small058
+    2300124: grass straight small059
+    2300126: grass straight small060
+    2300128: grass straight small062
+    2300130: grass straight small063
+    2300132: grass straight small064
+    2300134: grass straight small065
+    2300136: grass straight small066
+    2300138: grass straight small067
+    2300140: grass straight small068
+    2300142: grass straight small069
+    2300144: grass straight small070
+    2300146: grass straight small071
+    2300148: grass straight small072
+    2300150: grass straight small073
+    2300152: grass straight small074
+    2300154: grass straight small075
+    2300156: grass straight small076
+    2300158: grass straight small077
+    2300160: grass straight small078
+    2300162: grass straight small079
+    2300164: grass straight small080
+    2300166: grass straight small081
+    2300168: grass straight small082
+    2300170: grass straight small083
+    2300172: grass straight small084
+    2300174: grass straight small085
+    2300176: grass straight small086
+    2300178: grass straight small087
+    2300180: grass straight small088
+    2300182: grass straight small089
+    2300184: grass straight small090
+    2300186: grass straight small091
+    2300188: grass straight small092
+    2300190: grass straight small093
+    2300192: grass straight small094
+    2300194: grass straight small095
+    2300196: grass straight small096
+    2300198: grass straight small097
+    2300200: grass straight small098
+    2300202: grass straight small099
+    2300204: grass straight small100
+    2300206: grass straight small101
+    2300208: grass straight small102
+    2300210: grass straight small103
+    2300212: grass straight small104
+    2300214: grass straight small105
+    2300216: grass straight small106
+    2300218: grass straight small107
+    2300220: grass straight small108
+    2300222: grass straight small109
+    2300224: grass straight small110
+    2300226: grass straight small111
+    2300228: grass straight small112
+    2300230: grass straight small113
+    2300232: grass straight small114
+    2300234: grass straight small115
+    2300236: grass straight small116
+    2300238: grass straight small117
+    2300240: grass straight small118
+    2300242: grass straight small119
+    2300244: grass straight small120
+    2300246: grass straight small121
+    2300248: grass straight small122
+    2300250: grass straight small123
+    2300252: grass straight small124
+    2300254: grass straight small125
+    2300256: grass straight small126
+    2300258: grass straight small127
+    2300260: grass straight small128
+    2300262: grass straight small129
+    2300264: grass straight small130
+    2300266: grass straight small131
+    2300268: grass straight small132
+    2300270: grass straight small133
+    2300272: grass straight small134
+    2300274: grass straight small135
+    2300276: grass straight small136
+    2300278: grass straight small137
+    2300280: grass straight small138
+    2300282: grass straight small139
+    2300284: grass straight small140
+    2300286: grass straight small141
+    2300288: grass straight small142
+    2300290: grass straight small143
+    2300292: grass straight small144
+    2300294: grass straight small145
+    2300296: grass straight small146
+    2300298: grass straight small147
+    2300300: grass straight small148
+    2300302: grass straight small149
+    2300304: grass straight small150
+    2300306: grass straight small151
+    2300308: grass straight small152
+    2300310: grass straight small153
+    2300312: grass straight small154
+    2300314: grass straight small155
+    2300316: grass straight small156
+    2300318: grass straight small157
+    2300320: grass straight small158
+    2300322: grass straight small159
+    2300324: grass straight small160
+    2300326: grass straight small161
+    2300328: grass straight small162
+    2300330: grass straight small163
+    2300332: Plane002
+    2300334: Plane003
+    2300336: Plane004
+    2300338: Plane005
+    2300340: Plane006
+    2300342: Plane007
+    2300344: Plane008
+    2300346: Plane009
+    2300348: Plane010
+    2300350: Plane011
+    2300352: Plane012
+    2300354: Plane013
+    2300356: Plane014
+    2300358: Plane015
+    2300360: Plane016
+    2300362: stigma001
+    2300364: stigma002
+    2300366: stigma003
+    2300368: stigma004
+    2300370: stigma005
+    2300372: stigma006
+    2300374: stigma007
+    2300376: stigma008
+    2300378: stigma009
+    2300380: stigma010
+    2300382: stigma011
+    2300384: stigma012
+    2300386: stigma013
+    2300388: stigma014
+    2300390: stigma015
+    2300392: stigma016
+    2300394: stigma017
+    2300396: stigma018
+    2300398: stigma019
+    2300400: stigma020
+    2300402: stigma021
+    2300404: stigma022
+    2300406: stigma023
+    2300408: stigma024
+    2300410: stigma025
+    2300412: stigma026
+    2300414: stigma027
+    2300416: stigma028
+    2300418: stigma029
+    2300420: stigma030
+    2300422: stigma031
+    2300424: stigma032
+    2300426: stigma033
+    2300428: stigma034
+    2300430: stigma035
+    2300432: stigma036
+    2300434: stigma037
+    2300436: stigma038
+    2300438: stigma039
+    2300440: stigma040
+    3300000: flower001
+    3300002: flower003
+    3300004: flower005
+    3300006: flower006
+    3300008: flower009
+    3300010: Flowerstem006
+    3300012: Flowerstem007
+    3300014: Flowerstem008
+    3300016: Flowerstem009
+    3300018: Flowerstem010
+    3300020: grass straight small
+    3300022: grass straight small001
+    3300024: grass straight small002
+    3300026: grass straight small003
+    3300028: grass straight small004
+    3300030: grass straight small005
+    3300032: grass straight small006
+    3300034: grass straight small007
+    3300036: grass straight small008
+    3300038: grass straight small009
+    3300040: grass straight small010
+    3300042: grass straight small011
+    3300044: grass straight small012
+    3300046: grass straight small013
+    3300048: grass straight small014
+    3300050: grass straight small015
+    3300052: grass straight small016
+    3300054: grass straight small017
+    3300056: grass straight small018
+    3300058: grass straight small019
+    3300060: grass straight small020
+    3300062: grass straight small021
+    3300064: grass straight small022
+    3300066: grass straight small023
+    3300068: grass straight small024
+    3300070: grass straight small025
+    3300072: grass straight small026
+    3300074: grass straight small027
+    3300076: grass straight small028
+    3300078: grass straight small029
+    3300080: grass straight small030
+    3300082: grass straight small031
+    3300084: grass straight small032
+    3300086: grass straight small033
+    3300088: grass straight small034
+    3300090: grass straight small035
+    3300092: grass straight small036
+    3300094: grass straight small037
+    3300096: grass straight small038
+    3300098: grass straight small039
+    3300100: grass straight small040
+    3300102: grass straight small041
+    3300104: grass straight small042
+    3300106: grass straight small044
+    3300108: grass straight small046
+    3300110: grass straight small049
+    3300112: grass straight small052
+    3300114: grass straight small053
+    3300116: grass straight small054
+    3300118: grass straight small055
+    3300120: grass straight small056
+    3300122: grass straight small058
+    3300124: grass straight small059
+    3300126: grass straight small060
+    3300128: grass straight small062
+    3300130: grass straight small063
+    3300132: grass straight small064
+    3300134: grass straight small065
+    3300136: grass straight small066
+    3300138: grass straight small067
+    3300140: grass straight small068
+    3300142: grass straight small069
+    3300144: grass straight small070
+    3300146: grass straight small071
+    3300148: grass straight small072
+    3300150: grass straight small073
+    3300152: grass straight small074
+    3300154: grass straight small075
+    3300156: grass straight small076
+    3300158: grass straight small077
+    3300160: grass straight small078
+    3300162: grass straight small079
+    3300164: grass straight small080
+    3300166: grass straight small081
+    3300168: grass straight small082
+    3300170: grass straight small083
+    3300172: grass straight small084
+    3300174: grass straight small085
+    3300176: grass straight small086
+    3300178: grass straight small087
+    3300180: grass straight small088
+    3300182: grass straight small089
+    3300184: grass straight small090
+    3300186: grass straight small091
+    3300188: grass straight small092
+    3300190: grass straight small093
+    3300192: grass straight small094
+    3300194: grass straight small095
+    3300196: grass straight small096
+    3300198: grass straight small097
+    3300200: grass straight small098
+    3300202: grass straight small099
+    3300204: grass straight small100
+    3300206: grass straight small101
+    3300208: grass straight small102
+    3300210: grass straight small103
+    3300212: grass straight small104
+    3300214: grass straight small105
+    3300216: grass straight small106
+    3300218: grass straight small107
+    3300220: grass straight small108
+    3300222: grass straight small109
+    3300224: grass straight small110
+    3300226: grass straight small111
+    3300228: grass straight small112
+    3300230: grass straight small113
+    3300232: grass straight small114
+    3300234: grass straight small115
+    3300236: grass straight small116
+    3300238: grass straight small117
+    3300240: grass straight small118
+    3300242: grass straight small119
+    3300244: grass straight small120
+    3300246: grass straight small121
+    3300248: grass straight small122
+    3300250: grass straight small123
+    3300252: grass straight small124
+    3300254: grass straight small125
+    3300256: grass straight small126
+    3300258: grass straight small127
+    3300260: grass straight small128
+    3300262: grass straight small129
+    3300264: grass straight small130
+    3300266: grass straight small131
+    3300268: grass straight small132
+    3300270: grass straight small133
+    3300272: grass straight small134
+    3300274: grass straight small135
+    3300276: grass straight small136
+    3300278: grass straight small137
+    3300280: grass straight small138
+    3300282: grass straight small139
+    3300284: grass straight small140
+    3300286: grass straight small141
+    3300288: grass straight small142
+    3300290: grass straight small143
+    3300292: grass straight small144
+    3300294: grass straight small145
+    3300296: grass straight small146
+    3300298: grass straight small147
+    3300300: grass straight small148
+    3300302: grass straight small149
+    3300304: grass straight small150
+    3300306: grass straight small151
+    3300308: grass straight small152
+    3300310: grass straight small153
+    3300312: grass straight small154
+    3300314: grass straight small155
+    3300316: grass straight small156
+    3300318: grass straight small157
+    3300320: grass straight small158
+    3300322: grass straight small159
+    3300324: grass straight small160
+    3300326: grass straight small161
+    3300328: grass straight small162
+    3300330: grass straight small163
+    3300332: Plane002
+    3300334: Plane003
+    3300336: Plane004
+    3300338: Plane005
+    3300340: Plane006
+    3300342: Plane007
+    3300344: Plane008
+    3300346: Plane009
+    3300348: Plane010
+    3300350: Plane011
+    3300352: Plane012
+    3300354: Plane013
+    3300356: Plane014
+    3300358: Plane015
+    3300360: Plane016
+    3300362: stigma001
+    3300364: stigma002
+    3300366: stigma003
+    3300368: stigma004
+    3300370: stigma005
+    3300372: stigma006
+    3300374: stigma007
+    3300376: stigma008
+    3300378: stigma009
+    3300380: stigma010
+    3300382: stigma011
+    3300384: stigma012
+    3300386: stigma013
+    3300388: stigma014
+    3300390: stigma015
+    3300392: stigma016
+    3300394: stigma017
+    3300396: stigma018
+    3300398: stigma019
+    3300400: stigma020
+    3300402: stigma021
+    3300404: stigma022
+    3300406: stigma023
+    3300408: stigma024
+    3300410: stigma025
+    3300412: stigma026
+    3300414: stigma027
+    3300416: stigma028
+    3300418: stigma029
+    3300420: stigma030
+    3300422: stigma031
+    3300424: stigma032
+    3300426: stigma033
+    3300428: stigma034
+    3300430: stigma035
+    3300432: stigma036
+    3300434: stigma037
+    3300436: stigma038
+    3300438: stigma039
+    3300440: stigma040
+    4300000: stigma002
+    4300002: stigma008
+    4300004: stigma007
+    4300006: stigma006
+    4300008: stigma003
+    4300010: stigma004
+    4300012: stigma001
+    4300014: stigma005
+    4300016: flower001
+    4300018: Flowerstem006
+    4300020: Plane002
+    4300022: Plane004
+    4300024: Plane003
+    4300026: grass straight small033
+    4300028: grass straight small037
+    4300030: grass straight small035
+    4300032: grass straight small036
+    4300034: grass straight small052
+    4300036: grass straight small038
+    4300038: grass straight small041
+    4300040: grass straight small141
+    4300042: grass straight small040
+    4300044: grass straight small039
+    4300046: grass straight small029
+    4300048: grass straight small030
+    4300050: grass straight small049
+    4300052: grass straight small031
+    4300054: grass straight small046
+    4300056: grass straight small028
+    4300058: grass straight small044
+    4300060: grass straight small042
+    4300062: grass straight small018
+    4300064: grass straight small022
+    4300066: grass straight small023
+    4300068: grass straight small025
+    4300070: grass straight small109
+    4300072: grass straight small024
+    4300074: grass straight small026
+    4300076: grass straight small162
+    4300078: grass straight small019
+    4300080: grass straight small020
+    4300082: grass straight small053
+    4300084: grass straight small054
+    4300086: grass straight small062
+    4300088: grass straight small014
+    4300090: grass straight small002
+    4300092: grass straight small079
+    4300094: grass straight small114
+    4300096: grass straight small160
+    4300098: grass straight small015
+    4300100: grass straight small016
+    4300102: grass straight small117
+    4300104: grass straight small012
+    4300106: grass straight small013
+    4300108: grass straight small060
+    4300110: grass straight small152
+    4300112: grass straight small087
+    4300114: grass straight small008
+    4300116: grass straight small009
+    4300118: grass straight small144
+    4300120: grass straight small004
+    4300122: grass straight small011
+    4300124: grass straight small146
+    4300126: grass straight small119
+    4300128: grass straight small124
+    4300130: grass straight small125
+    4300132: grass straight small126
+    4300134: grass straight small102
+    4300136: grass straight small127
+    4300138: grass straight small139
+    4300140: grass straight small111
+    4300142: grass straight small128
+    4300144: grass straight small135
+    4300146: grass straight small136
+    4300148: grass straight small100
+    4300150: grass straight small105
+    4300152: grass straight small137
+    4300154: grass straight small147
+    4300156: grass straight small143
+    4300158: grass straight small098
+    4300160: grass straight small101
+    4300162: grass straight small103
+    4300164: grass straight small142
+    4300166: grass straight small113
+    4300168: grass straight small099
+    4300170: grass straight small097
+    4300172: grass straight small106
+    4300174: grass straight small148
+    4300176: grass straight small157
+    4300178: grass straight small122
+    4300180: grass straight small131
+    4300182: grass straight small123
+    4300184: grass straight small129
+    4300186: grass straight small121
+    4300188: grass straight small133
+    4300190: grass straight small134
+    4300192: grass straight small115
+    4300194: grass straight small104
+    4300196: grass straight small074
+    4300198: grass straight small118
+    4300200: grass straight small132
+    4300202: grass straight small069
+    4300204: grass straight small065
+    4300206: grass straight small085
+    4300208: grass straight small071
+    4300210: grass straight small070
+    4300212: grass straight small153
+    4300214: grass straight small094
+    4300216: grass straight small092
+    4300218: grass straight small080
+    4300220: grass straight small096
+    4300222: grass straight small149
+    4300224: grass straight small088
+    4300226: grass straight small158
+    4300228: grass straight small055
+    4300230: grass straight small068
+    4300232: grass straight small072
+    4300234: grass straight small090
+    4300236: grass straight small059
+    4300238: grass straight small155
+    4300240: grass straight small154
+    4300242: grass straight small140
+    4300244: grass straight small151
+    4300246: grass straight small058
+    4300248: grass straight small063
+    4300250: grass straight small067
+    4300252: grass straight small076
+    4300254: grass straight small083
+    4300256: grass straight small084
+    4300258: grass straight small081
+    4300260: grass straight small156
+    4300262: grass straight small032
+    4300264: grass straight small034
+    4300266: grass straight small027
+    4300268: grass straight small021
+    4300270: grass straight small017
+    4300272: grass straight small007
+    4300274: grass straight small005
+    4300276: grass straight small010
+    4300278: grass straight small110
+    4300280: grass straight small108
+    4300282: grass straight small138
+    4300284: grass straight small107
+    4300286: grass straight small112
+    4300288: grass straight small116
+    4300290: grass straight small120
+    4300292: grass straight small093
+    4300294: grass straight small095
+    4300296: grass straight small073
+    4300298: grass straight small091
+    4300300: grass straight small078
+    4300302: grass straight small086
+    4300304: grass straight small089
+    4300306: grass straight small145
+    4300308: grass straight small066
+    4300310: grass straight small161
+    4300312: grass straight small159
+    4300314: grass straight small056
+    4300316: grass straight small082
+    4300318: grass straight small003
+    4300320: grass straight small001
+    4300322: grass straight small
+    4300324: grass straight small075
+    4300326: grass straight small006
+    4300328: grass straight small163
+    4300330: grass straight small077
+    4300332: grass straight small064
+    4300334: grass straight small150
+    4300336: grass straight small130
+    4300338: stigma009
+    4300340: stigma010
+    4300342: stigma011
+    4300344: stigma012
+    4300346: stigma013
+    4300348: stigma014
+    4300350: stigma015
+    4300352: stigma016
+    4300354: flower003
+    4300356: Flowerstem007
+    4300358: Plane005
+    4300360: Plane006
+    4300362: Plane007
+    4300364: stigma017
+    4300366: stigma018
+    4300368: stigma019
+    4300370: stigma020
+    4300372: stigma021
+    4300374: stigma022
+    4300376: stigma023
+    4300378: stigma024
+    4300380: flower005
+    4300382: Flowerstem008
+    4300384: Plane008
+    4300386: Plane009
+    4300388: Plane010
+    4300390: flower006
+    4300392: stigma025
+    4300394: stigma026
+    4300396: stigma027
+    4300398: stigma028
+    4300400: stigma029
+    4300402: stigma030
+    4300404: stigma031
+    4300406: stigma032
+    4300408: Flowerstem009
+    4300410: Plane011
+    4300412: Plane012
+    4300414: Plane013
+    4300416: stigma033
+    4300418: stigma034
+    4300420: stigma035
+    4300422: stigma036
+    4300424: stigma037
+    4300426: stigma038
+    4300428: stigma039
+    4300430: stigma040
+    4300432: flower009
+    4300434: Flowerstem010
+    4300436: Plane014
+    4300438: Plane015
+    4300440: Plane016
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

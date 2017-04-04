@@ -833,6 +833,21 @@ public class battleController : MonoBehaviour
 		selectedTarget = -1;
 	}
 
+	public void decreaseChara()
+	{
+
+	}
+
+	public void increaseChara()
+	{
+		
+	}
+
+	public void switchChara(int chara)
+	{
+		
+	}
+
 //	public void selectTarget()
 //	{
 //		
@@ -944,10 +959,13 @@ public class battleController : MonoBehaviour
 		{
 			for (int i = 0; i < numPlayerCharas; i++)
 			{
-				if (gameController.currentParty[i] != gameController.currentCharacter)
-				{
-					gameController.currentParty[i].SetActive(false);
-				}
+				playerParty[i].GetComponent<playerController>().enabled = false;
+				playerParty[i].GetComponent<Collider>().enabled = false;
+				playerParty[i].transform.position = Vector3.zero;
+//				if (gameController.currentParty[i] != gameController.currentCharacter)
+//				{
+//					gameController.currentParty[i].SetActive(false);
+//				}
 			}
 		}
 
@@ -1137,12 +1155,16 @@ public class battleController : MonoBehaviour
 	{
 		for (int i = 1; i < numPlayerCharas; i++)
 		{
-			
+			playerParty[i].GetComponent<playerController>().enabled = false;
+			playerParty[i].GetComponent<Collider>().enabled = false;
+			playerParty[i].transform.position = Vector3.zero;
 		}
 
 		for (int i = 0; i < numAIs; i++)
 		{
-			
+//			playerParty[i].GetComponent<playerController>().enabled = false;
+//			playerParty[i].GetComponent<Collider>().enabled = false;
+//			playerParty[i].transform.position = Vector3.zero;
 		}
 
 		bool originalEnemyReset = false;
@@ -1164,6 +1186,23 @@ public class battleController : MonoBehaviour
 				Instantiate(originalEnemyParty[0].GetComponent<enemyController>().enemyParty[0]);
 			monster.transform.SetParent(enemyContainer);
 			monster.transform.position = battleGrid[17].position;
+		}
+
+		foreach (GameObject playerItem in playerItems)
+		{
+			Destroy(playerItem);
+		}
+		numItems = 0;
+
+		foreach (GameObject target in targetsList)
+		{
+			Destroy(target);
+		}
+		numTargets = 0;
+
+		foreach (GameObject skill in skillItems)
+		{
+			Destroy(skill);
 		}
 
 		increaseCharaButton.SetActive(false);

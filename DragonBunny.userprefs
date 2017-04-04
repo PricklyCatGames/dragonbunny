@@ -1,17 +1,19 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj" RefactoringSettings.EnableRefactorings="True">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/mainMenuController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/menuController.cs">
     <Files>
-      <File FileName="Assets/scripts/menuController.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/gameController.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/characterStatusController.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/menuController.cs" Line="253" Column="4" />
       <File FileName="Assets/scripts/npcController.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/playerController.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/inventoryController.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/characterMenuController.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/characterMenuController.cs" Line="92" Column="32" />
       <File FileName="Assets/scripts/shopMenuController.cs" Line="1" Column="1" />
       <File FileName="Assets/scripts/inventoryMenuController.cs" Line="1" Column="1" />
-      <File FileName="Assets/scripts/characterSkillManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/scripts/shopPlayerItemController.cs" Line="32" Column="3" NotebookId="1" />
+      <File FileName="Assets/scripts/shopItemController.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/scripts/dataContainer.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/scripts/itemBattleController.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/scripts/inventoryItemController.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/scripts/equipItemController.cs" Line="1" Column="1" NotebookId="1" />
@@ -21,7 +23,6 @@
       <File FileName="Assets/scripts/battleSkillController.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/scripts/battleDropController.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets/scripts/battleController.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/scripts/mainMenuController.cs" Line="39" Column="22" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

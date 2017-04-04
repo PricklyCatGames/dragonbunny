@@ -1,0 +1,588 @@
+fileFormatVersion: 2
+guid: 3ce1a4e5af12b4bcc9735030b134c5b0
+timeCreated: 1490733562
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: flower
+    100002: flower001
+    100004: flower002
+    100006: flower003
+    100008: flower004
+    100010: flower005
+    100012: flower006
+    100014: flower007
+    100016: flower008
+    100018: flower009
+    100020: flower010
+    100022: flower011
+    100024: flower012
+    100026: flower013
+    100028: flower014
+    100030: flower015
+    100032: flower016
+    100034: flower017
+    100036: flower018
+    100038: flower019
+    100040: flower020
+    100042: flower021
+    100044: flower022
+    100046: flower023
+    100048: flower024
+    100050: flower025
+    100052: flower026
+    100054: flower027
+    100056: flower028
+    100058: flower029
+    100060: flower030
+    100062: flower031
+    100064: flower032
+    100066: flower033
+    100068: flower034
+    100070: flower035
+    100072: flower036
+    100074: Flowerstem
+    100076: grass
+    100078: grass large bent
+    100080: grass large bent001
+    100082: grass large bent002
+    100084: grass straight small
+    100086: grass straight small001
+    100088: grass straight small002
+    100090: grass straight small003
+    100092: grass straight small004
+    100094: grass straight small005
+    100096: grass straight small006
+    100098: grass straight small007
+    100100: grass straight small008
+    100102: grass straight small009
+    100104: grass straight small010
+    100106: grass straight small011
+    100108: leaf
+    100110: leaf 1
+    100112: leaf 2
+    100114: leaf 3
+    100116: leaf001
+    100118: leaf002
+    100120: leaf003
+    100122: leaf004
+    100124: leaf005
+    100126: leaf006
+    100128: leaf007
+    100130: leaf008
+    100132: leaf009
+    100134: leaf010
+    100136: leaf011
+    100138: leaf012
+    100140: leaf013
+    100142: leaf014
+    100144: leaf015
+    100146: leaf016
+    100148: leaf017
+    100150: Norwegian blossom
+    100152: //RootNode
+    100154: stemsprout
+    100156: stemsprout001
+    100158: stemsprout002
+    100160: stemsprout003
+    100162: stemsprout004
+    100164: stemsprout005
+    100166: stigma005
+    100168: stigma006
+    100170: stigma007
+    100172: stigma008
+    100174: stigma009
+    100176: stigma010
+    100178: stigma011
+    100180: stigma012
+    100182: stigma013
+    100184: stigma014
+    100186: stigma015
+    100188: stigma016
+    100190: stigma017
+    100192: stigma018
+    100194: stigma019
+    100196: stigma020
+    100198: stigma021
+    100200: stigma022
+    100202: stigma023
+    100204: stigma024
+    100206: stigma025
+    400000: flower
+    400002: flower001
+    400004: flower002
+    400006: flower003
+    400008: flower004
+    400010: flower005
+    400012: flower006
+    400014: flower007
+    400016: flower008
+    400018: flower009
+    400020: flower010
+    400022: flower011
+    400024: flower012
+    400026: flower013
+    400028: flower014
+    400030: flower015
+    400032: flower016
+    400034: flower017
+    400036: flower018
+    400038: flower019
+    400040: flower020
+    400042: flower021
+    400044: flower022
+    400046: flower023
+    400048: flower024
+    400050: flower025
+    400052: flower026
+    400054: flower027
+    400056: flower028
+    400058: flower029
+    400060: flower030
+    400062: flower031
+    400064: flower032
+    400066: flower033
+    400068: flower034
+    400070: flower035
+    400072: flower036
+    400074: Flowerstem
+    400076: grass
+    400078: grass large bent
+    400080: grass large bent001
+    400082: grass large bent002
+    400084: grass straight small
+    400086: grass straight small001
+    400088: grass straight small002
+    400090: grass straight small003
+    400092: grass straight small004
+    400094: grass straight small005
+    400096: grass straight small006
+    400098: grass straight small007
+    400100: grass straight small008
+    400102: grass straight small009
+    400104: grass straight small010
+    400106: grass straight small011
+    400108: leaf
+    400110: leaf 1
+    400112: leaf 2
+    400114: leaf 3
+    400116: leaf001
+    400118: leaf002
+    400120: leaf003
+    400122: leaf004
+    400124: leaf005
+    400126: leaf006
+    400128: leaf007
+    400130: leaf008
+    400132: leaf009
+    400134: leaf010
+    400136: leaf011
+    400138: leaf012
+    400140: leaf013
+    400142: leaf014
+    400144: leaf015
+    400146: leaf016
+    400148: leaf017
+    400150: Norwegian blossom
+    400152: //RootNode
+    400154: stemsprout
+    400156: stemsprout001
+    400158: stemsprout002
+    400160: stemsprout003
+    400162: stemsprout004
+    400164: stemsprout005
+    400166: stigma005
+    400168: stigma006
+    400170: stigma007
+    400172: stigma008
+    400174: stigma009
+    400176: stigma010
+    400178: stigma011
+    400180: stigma012
+    400182: stigma013
+    400184: stigma014
+    400186: stigma015
+    400188: stigma016
+    400190: stigma017
+    400192: stigma018
+    400194: stigma019
+    400196: stigma020
+    400198: stigma021
+    400200: stigma022
+    400202: stigma023
+    400204: stigma024
+    400206: stigma025
+    2300000: flower
+    2300002: flower001
+    2300004: flower002
+    2300006: flower003
+    2300008: flower004
+    2300010: flower005
+    2300012: flower006
+    2300014: flower007
+    2300016: flower008
+    2300018: flower009
+    2300020: flower010
+    2300022: flower011
+    2300024: flower012
+    2300026: flower013
+    2300028: flower014
+    2300030: flower015
+    2300032: flower016
+    2300034: flower017
+    2300036: flower018
+    2300038: flower019
+    2300040: flower020
+    2300042: flower021
+    2300044: flower022
+    2300046: flower023
+    2300048: flower024
+    2300050: flower025
+    2300052: flower026
+    2300054: flower027
+    2300056: flower028
+    2300058: flower029
+    2300060: flower030
+    2300062: flower031
+    2300064: flower032
+    2300066: flower033
+    2300068: flower034
+    2300070: flower035
+    2300072: flower036
+    2300074: Flowerstem
+    2300076: grass large bent
+    2300078: grass large bent001
+    2300080: grass large bent002
+    2300082: grass straight small
+    2300084: grass straight small001
+    2300086: grass straight small002
+    2300088: grass straight small003
+    2300090: grass straight small004
+    2300092: grass straight small005
+    2300094: grass straight small006
+    2300096: grass straight small007
+    2300098: grass straight small008
+    2300100: grass straight small009
+    2300102: grass straight small010
+    2300104: grass straight small011
+    2300106: leaf
+    2300108: leaf 1
+    2300110: leaf 2
+    2300112: leaf 3
+    2300114: leaf001
+    2300116: leaf002
+    2300118: leaf003
+    2300120: leaf004
+    2300122: leaf005
+    2300124: leaf006
+    2300126: leaf007
+    2300128: leaf008
+    2300130: leaf009
+    2300132: leaf010
+    2300134: leaf011
+    2300136: leaf012
+    2300138: leaf013
+    2300140: leaf014
+    2300142: leaf015
+    2300144: leaf016
+    2300146: leaf017
+    2300148: stemsprout
+    2300150: stemsprout001
+    2300152: stemsprout002
+    2300154: stemsprout003
+    2300156: stemsprout004
+    2300158: stemsprout005
+    2300160: stigma005
+    2300162: stigma006
+    2300164: stigma007
+    2300166: stigma008
+    2300168: stigma009
+    2300170: stigma010
+    2300172: stigma011
+    2300174: stigma012
+    2300176: stigma013
+    2300178: stigma014
+    2300180: stigma015
+    2300182: stigma016
+    2300184: stigma017
+    2300186: stigma018
+    2300188: stigma019
+    2300190: stigma020
+    2300192: stigma021
+    2300194: stigma022
+    2300196: stigma023
+    2300198: stigma024
+    2300200: stigma025
+    3300000: flower
+    3300002: flower001
+    3300004: flower002
+    3300006: flower003
+    3300008: flower004
+    3300010: flower005
+    3300012: flower006
+    3300014: flower007
+    3300016: flower008
+    3300018: flower009
+    3300020: flower010
+    3300022: flower011
+    3300024: flower012
+    3300026: flower013
+    3300028: flower014
+    3300030: flower015
+    3300032: flower016
+    3300034: flower017
+    3300036: flower018
+    3300038: flower019
+    3300040: flower020
+    3300042: flower021
+    3300044: flower022
+    3300046: flower023
+    3300048: flower024
+    3300050: flower025
+    3300052: flower026
+    3300054: flower027
+    3300056: flower028
+    3300058: flower029
+    3300060: flower030
+    3300062: flower031
+    3300064: flower032
+    3300066: flower033
+    3300068: flower034
+    3300070: flower035
+    3300072: flower036
+    3300074: Flowerstem
+    3300076: grass large bent
+    3300078: grass large bent001
+    3300080: grass large bent002
+    3300082: grass straight small
+    3300084: grass straight small001
+    3300086: grass straight small002
+    3300088: grass straight small003
+    3300090: grass straight small004
+    3300092: grass straight small005
+    3300094: grass straight small006
+    3300096: grass straight small007
+    3300098: grass straight small008
+    3300100: grass straight small009
+    3300102: grass straight small010
+    3300104: grass straight small011
+    3300106: leaf
+    3300108: leaf 1
+    3300110: leaf 2
+    3300112: leaf 3
+    3300114: leaf001
+    3300116: leaf002
+    3300118: leaf003
+    3300120: leaf004
+    3300122: leaf005
+    3300124: leaf006
+    3300126: leaf007
+    3300128: leaf008
+    3300130: leaf009
+    3300132: leaf010
+    3300134: leaf011
+    3300136: leaf012
+    3300138: leaf013
+    3300140: leaf014
+    3300142: leaf015
+    3300144: leaf016
+    3300146: leaf017
+    3300148: stemsprout
+    3300150: stemsprout001
+    3300152: stemsprout002
+    3300154: stemsprout003
+    3300156: stemsprout004
+    3300158: stemsprout005
+    3300160: stigma005
+    3300162: stigma006
+    3300164: stigma007
+    3300166: stigma008
+    3300168: stigma009
+    3300170: stigma010
+    3300172: stigma011
+    3300174: stigma012
+    3300176: stigma013
+    3300178: stigma014
+    3300180: stigma015
+    3300182: stigma016
+    3300184: stigma017
+    3300186: stigma018
+    3300188: stigma019
+    3300190: stigma020
+    3300192: stigma021
+    3300194: stigma022
+    3300196: stigma023
+    3300198: stigma024
+    3300200: stigma025
+    4300000: leaf
+    4300002: stemsprout
+    4300004: flower
+    4300006: stigma007
+    4300008: flower004
+    4300010: stigma010
+    4300012: stigma011
+    4300014: stigma012
+    4300016: stigma013
+    4300018: leaf
+    4300020: leaf
+    4300022: leaf013
+    4300024: flower026
+    4300026: flower028
+    4300028: flower027
+    4300030: leaf012
+    4300032: flower002
+    4300034: flower001
+    4300036: stigma008
+    4300038: stigma009
+    4300040: leaf011
+    4300042: flower023
+    4300044: flower022
+    4300046: flower024
+    4300048: leaf009
+    4300050: flower020
+    4300052: stemsprout003
+    4300054: flower021
+    4300056: leaf010
+    4300058: stemsprout002
+    4300060: flower015
+    4300062: flower013
+    4300064: flower016
+    4300066: leaf007
+    4300068: stigma016
+    4300070: flower014
+    4300072: leaf005
+    4300074: leaf006
+    4300076: flower003
+    4300078: leaf003
+    4300080: flower019
+    4300082: leaf
+    4300084: leaf017
+    4300086: stigma006
+    4300088: flower036
+    4300090: leaf016
+    4300092: stemsprout005
+    4300094: flower035
+    4300096: stigma017
+    4300098: stigma019
+    4300100: stigma018
+    4300102: stigma020
+    4300104: stigma021
+    4300106: stemsprout004
+    4300108: flower030
+    4300110: flower031
+    4300112: flower033
+    4300114: leaf015
+    4300116: flower034
+    4300118: flower029
+    4300120: leaf014
+    4300122: stigma005
+    4300124: flower032
+    4300126: flower007
+    4300128: flower008
+    4300130: flower005
+    4300132: leaf001
+    4300134: flower009
+    4300136: leaf002
+    4300138: stigma015
+    4300140: flower006
+    4300142: flower025
+    4300144: flower011
+    4300146: leaf004
+    4300148: flower012
+    4300150: stemsprout001
+    4300152: flower010
+    4300154: stigma024
+    4300156: stigma025
+    4300158: stigma023
+    4300160: stigma022
+    4300162: leaf008
+    4300164: flower017
+    4300166: flower018
+    4300168: stigma014
+    4300170: Flowerstem
+    4300172: grass straight small004
+    4300174: grass large bent
+    4300176: grass straight small003
+    4300178: grass straight small
+    4300180: grass large bent001
+    4300182: grass straight small001
+    4300184: grass straight small002
+    4300186: grass large bent002
+    4300188: grass straight small005
+    4300190: grass straight small006
+    4300192: grass straight small008
+    4300194: grass straight small009
+    4300196: grass straight small010
+    4300198: grass straight small011
+    4300200: grass straight small007
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
