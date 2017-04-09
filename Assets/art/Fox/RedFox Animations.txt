@@ -1,0 +1,5 @@
+Walk      1-88
+Run      89-106
+Idle    107-292
+Graze   293-382
+Scared  383-443

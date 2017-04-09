@@ -900,6 +900,175 @@ ModelImporter:
     4300332: LBL_leaf002
     4300334: limb bent large004
     4300336: LBL_leaf004
+    6400000: LBL_leaf
+    6400002: LBL_leaf001
+    6400004: LBL_leaf002
+    6400006: LBL_leaf003
+    6400008: LBL_leaf004
+    6400010: LBL_leaf005
+    6400012: LBL_leaf006
+    6400014: LBL_leaf007
+    6400016: LBL_leaf008
+    6400018: LBL_leaf009
+    6400020: LBL_leaf010
+    6400022: LBL_leaf011
+    6400024: LBL_leaf012
+    6400026: LBL_leaf013
+    6400028: LBS_leaf_child018
+    6400030: LBS_leaf_child019
+    6400032: LBS_leaf_child020
+    6400034: LBS_leaf_child021
+    6400036: LBS_leaf_child022
+    6400038: LBS_leaf_child023
+    6400040: LBS_leaf_child024
+    6400042: LBS_leaf_child025
+    6400044: LBS_leaf_child026
+    6400046: LBS_leaf_child027
+    6400048: LBS_leaf_child028
+    6400050: LBS_leaf_child029
+    6400052: LBS_leaf_child030
+    6400054: LBS_leaf_child031
+    6400056: LBS_leaf_child032
+    6400058: LBS_leaf_child033
+    6400060: LBS_leaf_child034
+    6400062: LBS_leaf_child035
+    6400064: LBS_leaf_child036
+    6400066: LBS_leaf_child037
+    6400068: LBS_leaf_child038
+    6400070: LBS_leaf_child039
+    6400072: LBS_leaf_child040
+    6400074: LBS_leaf_child041
+    6400076: LBS_leaf_child042
+    6400078: LBS_leaf_child043
+    6400080: LBS_leaf_child044
+    6400082: LBS_leaf_child045
+    6400084: LBS_leaf_child046
+    6400086: LBS_leaf_child047
+    6400088: LBS_leaf_child048
+    6400090: LBS_leaf_child049
+    6400092: LBS_leaf_child050
+    6400094: LBS_leaf_child051
+    6400096: LBS_leaf_child052
+    6400098: LBS_leaf_child053
+    6400100: LBS_leaf_child054
+    6400102: LBS_leaf_child055
+    6400104: LBS_leaf_child056
+    6400106: LBS_leaf_child057
+    6400108: LBS_leaf_child058
+    6400110: LBS_leaf_child059
+    6400112: LBS_leaf_child060
+    6400114: LBS_leaf_child061
+    6400116: LBS_leaf_child062
+    6400118: LBS_leaf_child063
+    6400120: LBS_leaf_child064
+    6400122: LBS_leaf_child065
+    6400124: LBS_leaf_child066
+    6400126: LBS_leaf_child067
+    6400128: LBS_leaf_child068
+    6400130: LBS_leaf_child069
+    6400132: LBS_leaf_child070
+    6400134: LBS_leaf_child071
+    6400136: LBS_leaf_child072
+    6400138: LBS_leaf_child073
+    6400140: LBS_leaf_child074
+    6400142: LBS_leaf_child075
+    6400144: LBS_leaf_child076
+    6400146: LBS_leaf_child077
+    6400148: LBS_leaf_child078
+    6400150: LBS_leaf_child079
+    6400152: LBS_leaf_child080
+    6400154: LBS_leaf_child081
+    6400156: LBS_leaf_child082
+    6400158: LBS_leaf_child083
+    6400160: LBS_leaf_child084
+    6400162: LBS_leaf_child085
+    6400164: LBS_leaf_child086
+    6400166: LBS_leaf_child087
+    6400168: LBS_leaf_child088
+    6400170: LBS_leaf_child089
+    6400172: LBS_leaf_child090
+    6400174: LBS_leaf_child091
+    6400176: LBS_leaf_child092
+    6400178: LBS_leaf_child093
+    6400180: LBS_leaf_child094
+    6400182: LBS_leaf_child095
+    6400184: LBS_leaf_child096
+    6400186: LBS_leaf_child097
+    6400188: LBS_leaf_child098
+    6400190: LBS_leaf_child099
+    6400192: LBS_leaf_child100
+    6400194: LBS_leaf_child101
+    6400196: LBS_leaf_child102
+    6400198: LBS_leaf_child103
+    6400200: LBS_leaf_child104
+    6400202: LBS_leaf_child105
+    6400204: LBS_leaf_child106
+    6400206: LBS_leaf_child107
+    6400208: LBS_leaf_child108
+    6400210: LBS_leaf_child109
+    6400212: LBS_leaf_child110
+    6400214: LBS_leaf_child111
+    6400216: LBS_leaf_child112
+    6400218: LBS_leaf_child113
+    6400220: LBS_leaf_child114
+    6400222: LBS_leaf_child115
+    6400224: LBS_leaf_child116
+    6400226: LBS_leaf_child117
+    6400228: LBS_leaf_child118
+    6400230: LBS_leaf_child119
+    6400232: LBS_leaf_child120
+    6400234: LBS_leaf_child121
+    6400236: LBS_leaf_child122
+    6400238: LBS_leaf_child123
+    6400240: LBS_leaf_child124
+    6400242: LBS_leaf_child125
+    6400244: LBS_leaf_child126
+    6400246: LBS_leaf_child127
+    6400248: LBS_leaf_child128
+    6400250: LBS_leaf_child129
+    6400252: LBS_leaf_child130
+    6400254: LBS_leaf_child131
+    6400256: LBS_leaf_child132
+    6400258: LBS_leaf_child133
+    6400260: LBS_leaf_child134
+    6400262: LBS_leaf_child135
+    6400264: LBS_leaf_child136
+    6400266: LBS_leaf_child137
+    6400268: LBS_leaf_child138
+    6400270: LBS_leaf_child139
+    6400272: LBS_leaf_child140
+    6400274: LBS_leaf_child141
+    6400276: LBS_leaf_child142
+    6400278: LBS_leaf_child143
+    6400280: LBS_leaf_child144
+    6400282: LBS_leaf_child145
+    6400284: LBS_leaf_child146
+    6400286: LBS_leaf_child147
+    6400288: limb bent large
+    6400290: limb bent large001
+    6400292: limb bent large002
+    6400294: limb bent large003
+    6400296: limb bent large004
+    6400298: limb bent large005
+    6400300: limb bent large006
+    6400302: limb bent large007
+    6400304: limb bent large008
+    6400306: limb bent large009
+    6400308: limb bent large010
+    6400310: limb bent large011
+    6400312: limb bent large012
+    6400314: limb bent large013
+    6400316: limb bent small001
+    6400318: limb bent small002
+    6400320: limb bent small003
+    6400322: limb bent small004
+    6400324: limb bent small005
+    6400326: limb bent small006
+    6400328: limb bent small007
+    6400330: limb bent small008
+    6400332: limb bent small009
+    6400334: limb bent small010
+    6400336: treetrunk
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -927,7 +1096,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

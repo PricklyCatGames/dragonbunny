@@ -1,0 +1,216 @@
+fileFormatVersion: 2
+guid: c46553c89e1ea4c7b9f434e6914daf9a
+timeCreated: 1491699623
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: BEARD
+    100002: Beard
+    100004: Beard 1
+    100006: Beard2
+    100008: Beard3
+    100010: Beard4
+    100012: Beard5
+    100014: Beard6
+    100016: Bip01
+    100018: Bip01_Head
+    100020: Bip01_L_Calf
+    100022: Bip01_L_Clavicle
+    100024: Bip01_L_Finger1
+    100026: Bip01_L_Foot
+    100028: Bip01_L_Forearm
+    100030: Bip01_L_Hand
+    100032: Bip01_L_Thigh
+    100034: Bip01_L_UpperArm
+    100036: Bip01_Neck
+    100038: Bip01_Pelvis
+    100040: Bip01_R_Calf
+    100042: Bip01_R_Clavicle
+    100044: Bip01_R_Finger0
+    100046: Bip01_R_Foot
+    100048: Bip01_R_Forearm
+    100050: Bip01_R_Hand
+    100052: Bip01_R_Thigh
+    100054: Bip01_R_UpperArm
+    100056: Bip01_skirt_front
+    100058: Bip01_skirt_front02
+    100060: Bip01_skirt_front03
+    100062: Bip01_Spine
+    100064: Bip01_Spine1
+    100066: Bip01_Spine2
+    100068: Bone
+    100070: Bone1
+    100072: GroltClub
+    100074: GroltClub 1
+    100076: HeadHair
+    100078: HeadHair 1
+    100080: LeftLitFingerA
+    100082: LeftLitFingerB
+    100084: LeftLitFingerC
+    100086: LFingerB
+    100088: LFingerC
+    100090: //RootNode
+    100092: RighLitFingerA
+    100094: RighLitFingerA1
+    100096: RightFingerB
+    100098: RightFingerC
+    100100: Troll
+    100102: Troll 1
+    100104: Troll0
+    100106: Troll_Troll
+    400000: BEARD
+    400002: Beard
+    400004: Beard 1
+    400006: Beard2
+    400008: Beard3
+    400010: Beard4
+    400012: Beard5
+    400014: Beard6
+    400016: Bip01
+    400018: Bip01_Head
+    400020: Bip01_L_Calf
+    400022: Bip01_L_Clavicle
+    400024: Bip01_L_Finger1
+    400026: Bip01_L_Foot
+    400028: Bip01_L_Forearm
+    400030: Bip01_L_Hand
+    400032: Bip01_L_Thigh
+    400034: Bip01_L_UpperArm
+    400036: Bip01_Neck
+    400038: Bip01_Pelvis
+    400040: Bip01_R_Calf
+    400042: Bip01_R_Clavicle
+    400044: Bip01_R_Finger0
+    400046: Bip01_R_Foot
+    400048: Bip01_R_Forearm
+    400050: Bip01_R_Hand
+    400052: Bip01_R_Thigh
+    400054: Bip01_R_UpperArm
+    400056: Bip01_skirt_front
+    400058: Bip01_skirt_front02
+    400060: Bip01_skirt_front03
+    400062: Bip01_Spine
+    400064: Bip01_Spine1
+    400066: Bip01_Spine2
+    400068: Bone
+    400070: Bone1
+    400072: GroltClub
+    400074: GroltClub 1
+    400076: HeadHair
+    400078: HeadHair 1
+    400080: LeftLitFingerA
+    400082: LeftLitFingerB
+    400084: LeftLitFingerC
+    400086: LFingerB
+    400088: LFingerC
+    400090: //RootNode
+    400092: RighLitFingerA
+    400094: RighLitFingerA1
+    400096: RightFingerB
+    400098: RightFingerC
+    400100: Troll
+    400102: Troll 1
+    400104: Troll0
+    400106: Troll_Troll
+    4300000: GroltClub
+    4300002: Troll
+    4300004: Beard
+    4300006: HeadHair
+    7400000: TPOSE
+    7400002: Idle
+    7400004: Dodge_Backwards
+    7400006: Dodge_to_Left
+    7400008: Dodge_to_Right
+    7400010: Duck_Below_HIgh_Swing
+    7400012: Parry_High_Front
+    7400014: Parry_High_Left
+    7400016: Parry_High_Right
+    7400018: Parry_Low_Front
+    7400020: Parry_low_Right
+    7400022: Club_Swing_High_Right
+    7400024: Club_High_Straight_Down
+    7400026: Club_Swing_Low_Left
+    7400028: Club_Swing_Low_Right
+    7400030: Club_Swing_Mid_Left
+    7400032: Club_Thrust_High
+    7400034: Club_Thrust_Low
+    7400036: Club_Thrust_Mid
+    7400038: Walk_holding_Club
+    7400040: Charge
+    7400042: DyingA
+    7400044: DyingB
+    7400046: Sneaking
+    9500000: //RootNode
+    13700000: Beard
+    13700002: GroltClub 1
+    13700004: HeadHair 1
+    13700006: Troll 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

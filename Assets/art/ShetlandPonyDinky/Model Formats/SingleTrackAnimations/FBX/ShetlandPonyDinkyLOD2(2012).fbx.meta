@@ -1,0 +1,251 @@
+fileFormatVersion: 2
+guid: c7c2a227fdb984d24824d18e5eb90704
+timeCreated: 1491699624
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: bone
+    100002: bone1
+    100004: Bone10
+    100006: Bone11
+    100008: Bone12
+    100010: bone2
+    100012: bone3
+    100014: bone4
+    100016: bone5
+    100018: bone6
+    100020: bone7
+    100022: bone8
+    100024: bone9
+    100026: MapRoot1
+    100028: Quadruped_Skeleton
+    100030: Quadruped_Skeleton_BLFemur
+    100032: Quadruped_Skeleton_BLFootBone1
+    100034: Quadruped_Skeleton_BLFootBone2
+    100036: Quadruped_Skeleton_BLFootBone3
+    100038: Quadruped_Skeleton_BLFootRoot
+    100040: Quadruped_Skeleton_BLLegRoot
+    100042: Quadruped_Skeleton_BLMetarsal
+    100044: Quadruped_Skeleton_BLTibia
+    100046: Quadruped_Skeleton_BRFemur
+    100048: Quadruped_Skeleton_BRFootBone1
+    100050: Quadruped_Skeleton_BRFootBone2
+    100052: Quadruped_Skeleton_BRFootBone3
+    100054: Quadruped_Skeleton_BRFootRoot
+    100056: Quadruped_Skeleton_BRLegRoot
+    100058: Quadruped_Skeleton_BRMetarsal
+    100060: Quadruped_Skeleton_BRTibia
+    100062: Quadruped_Skeleton_Chest
+    100064: Quadruped_Skeleton_Chest1
+    100066: Quadruped_Skeleton_ChestEffector
+    100068: Quadruped_Skeleton_eff1
+    100070: Quadruped_Skeleton_eff2
+    100072: Quadruped_Skeleton_eff3
+    100074: Quadruped_Skeleton_eff5
+    100076: Quadruped_Skeleton_eff7
+    100078: Quadruped_Skeleton_eff8
+    100080: Quadruped_Skeleton_GlobalSRT
+    100082: Quadruped_Skeleton_LFootBone1
+    100084: Quadruped_Skeleton_LFootBone2
+    100086: Quadruped_Skeleton_LFootBone3
+    100088: Quadruped_Skeleton_LFootRoot
+    100090: Quadruped_Skeleton_LRoot
+    100092: Quadruped_Skeleton_LShin
+    100094: Quadruped_Skeleton_LShoulder
+    100096: Quadruped_Skeleton_LShoulderRoot
+    100098: Quadruped_Skeleton_LThigh
+    100100: Quadruped_Skeleton_RFootBone1
+    100102: Quadruped_Skeleton_RFootBone2
+    100104: Quadruped_Skeleton_RFootBone3
+    100106: Quadruped_Skeleton_RFootRoot
+    100108: Quadruped_Skeleton_root4
+    100110: Quadruped_Skeleton_RRoot
+    100112: Quadruped_Skeleton_RShin
+    100114: Quadruped_Skeleton_RShoulder
+    100116: Quadruped_Skeleton_RShoulderRoot
+    100118: Quadruped_Skeleton_RThigh
+    100120: Quadruped_Skeleton_Spine1
+    100122: Quadruped_Skeleton_Spine2
+    100124: Quadruped_Skeleton_Spine3
+    100126: Quadruped_Skeleton_Spine4
+    100128: Quadruped_Skeleton_Spine5
+    100130: Quadruped_Skeleton_Spine6
+    100132: Quadruped_Skeleton_SpineRoot
+    100134: Quadruped_Skeleton_SpineRoot1
+    100136: Quadruped_Skeleton_Tail1
+    100138: Quadruped_Skeleton_Tail2
+    100140: Quadruped_Skeleton_Tail3
+    100142: Quadruped_Skeleton_UpperBody
+    100144: root
+    100146: root1
+    100148: root2
+    100150: root3
+    100152: root4
+    100154: Scene_Root
+    100156: Scene_Root0
+    100158: Scene_Root01
+    100160: ShetlandponyDinky
+    100162: ShetlandponyDinky 1
+    100164: ShetlandponyDinky0
+    100166: ShetlandponyDinky0 1
+    100168: //RootNode
+    400000: bone
+    400002: bone1
+    400004: Bone10
+    400006: Bone11
+    400008: Bone12
+    400010: bone2
+    400012: bone3
+    400014: bone4
+    400016: bone5
+    400018: bone6
+    400020: bone7
+    400022: bone8
+    400024: bone9
+    400026: MapRoot1
+    400028: Quadruped_Skeleton
+    400030: Quadruped_Skeleton_BLFemur
+    400032: Quadruped_Skeleton_BLFootBone1
+    400034: Quadruped_Skeleton_BLFootBone2
+    400036: Quadruped_Skeleton_BLFootBone3
+    400038: Quadruped_Skeleton_BLFootRoot
+    400040: Quadruped_Skeleton_BLLegRoot
+    400042: Quadruped_Skeleton_BLMetarsal
+    400044: Quadruped_Skeleton_BLTibia
+    400046: Quadruped_Skeleton_BRFemur
+    400048: Quadruped_Skeleton_BRFootBone1
+    400050: Quadruped_Skeleton_BRFootBone2
+    400052: Quadruped_Skeleton_BRFootBone3
+    400054: Quadruped_Skeleton_BRFootRoot
+    400056: Quadruped_Skeleton_BRLegRoot
+    400058: Quadruped_Skeleton_BRMetarsal
+    400060: Quadruped_Skeleton_BRTibia
+    400062: Quadruped_Skeleton_Chest
+    400064: Quadruped_Skeleton_Chest1
+    400066: Quadruped_Skeleton_ChestEffector
+    400068: Quadruped_Skeleton_eff1
+    400070: Quadruped_Skeleton_eff2
+    400072: Quadruped_Skeleton_eff3
+    400074: Quadruped_Skeleton_eff5
+    400076: Quadruped_Skeleton_eff7
+    400078: Quadruped_Skeleton_eff8
+    400080: Quadruped_Skeleton_GlobalSRT
+    400082: Quadruped_Skeleton_LFootBone1
+    400084: Quadruped_Skeleton_LFootBone2
+    400086: Quadruped_Skeleton_LFootBone3
+    400088: Quadruped_Skeleton_LFootRoot
+    400090: Quadruped_Skeleton_LRoot
+    400092: Quadruped_Skeleton_LShin
+    400094: Quadruped_Skeleton_LShoulder
+    400096: Quadruped_Skeleton_LShoulderRoot
+    400098: Quadruped_Skeleton_LThigh
+    400100: Quadruped_Skeleton_RFootBone1
+    400102: Quadruped_Skeleton_RFootBone2
+    400104: Quadruped_Skeleton_RFootBone3
+    400106: Quadruped_Skeleton_RFootRoot
+    400108: Quadruped_Skeleton_root4
+    400110: Quadruped_Skeleton_RRoot
+    400112: Quadruped_Skeleton_RShin
+    400114: Quadruped_Skeleton_RShoulder
+    400116: Quadruped_Skeleton_RShoulderRoot
+    400118: Quadruped_Skeleton_RThigh
+    400120: Quadruped_Skeleton_Spine1
+    400122: Quadruped_Skeleton_Spine2
+    400124: Quadruped_Skeleton_Spine3
+    400126: Quadruped_Skeleton_Spine4
+    400128: Quadruped_Skeleton_Spine5
+    400130: Quadruped_Skeleton_Spine6
+    400132: Quadruped_Skeleton_SpineRoot
+    400134: Quadruped_Skeleton_SpineRoot1
+    400136: Quadruped_Skeleton_Tail1
+    400138: Quadruped_Skeleton_Tail2
+    400140: Quadruped_Skeleton_Tail3
+    400142: Quadruped_Skeleton_UpperBody
+    400144: root
+    400146: root1
+    400148: root2
+    400150: root3
+    400152: root4
+    400154: Scene_Root
+    400156: Scene_Root0
+    400158: Scene_Root01
+    400160: ShetlandponyDinky
+    400162: ShetlandponyDinky 1
+    400164: ShetlandponyDinky0
+    400166: ShetlandponyDinky0 1
+    400168: //RootNode
+    4300000: ShetlandponyDinky0
+    4300002: ShetlandponyDinky
+    7400000: CombinedAnim
+    9500000: //RootNode
+    13700000: ShetlandponyDinky
+    13700002: ShetlandponyDinky0
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

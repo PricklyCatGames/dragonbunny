@@ -516,6 +516,107 @@ ModelImporter:
     4300196: grass straight small010
     4300198: grass straight small011
     4300200: grass straight small007
+    6400000: flower
+    6400002: flower001
+    6400004: flower002
+    6400006: flower003
+    6400008: flower004
+    6400010: flower005
+    6400012: flower006
+    6400014: flower007
+    6400016: flower008
+    6400018: flower009
+    6400020: flower010
+    6400022: flower011
+    6400024: flower012
+    6400026: flower013
+    6400028: flower014
+    6400030: flower015
+    6400032: flower016
+    6400034: flower017
+    6400036: flower018
+    6400038: flower019
+    6400040: flower020
+    6400042: flower021
+    6400044: flower022
+    6400046: flower023
+    6400048: flower024
+    6400050: flower025
+    6400052: flower026
+    6400054: flower027
+    6400056: flower028
+    6400058: flower029
+    6400060: flower030
+    6400062: flower031
+    6400064: flower032
+    6400066: flower033
+    6400068: flower034
+    6400070: flower035
+    6400072: flower036
+    6400074: Flowerstem
+    6400076: grass large bent
+    6400078: grass large bent001
+    6400080: grass large bent002
+    6400082: grass straight small
+    6400084: grass straight small001
+    6400086: grass straight small002
+    6400088: grass straight small003
+    6400090: grass straight small004
+    6400092: grass straight small005
+    6400094: grass straight small006
+    6400096: grass straight small007
+    6400098: grass straight small008
+    6400100: grass straight small009
+    6400102: grass straight small010
+    6400104: grass straight small011
+    6400106: leaf
+    6400108: leaf 1
+    6400110: leaf 2
+    6400112: leaf 3
+    6400114: leaf001
+    6400116: leaf002
+    6400118: leaf003
+    6400120: leaf004
+    6400122: leaf005
+    6400124: leaf006
+    6400126: leaf007
+    6400128: leaf008
+    6400130: leaf009
+    6400132: leaf010
+    6400134: leaf011
+    6400136: leaf012
+    6400138: leaf013
+    6400140: leaf014
+    6400142: leaf015
+    6400144: leaf016
+    6400146: leaf017
+    6400148: stemsprout
+    6400150: stemsprout001
+    6400152: stemsprout002
+    6400154: stemsprout003
+    6400156: stemsprout004
+    6400158: stemsprout005
+    6400160: stigma005
+    6400162: stigma006
+    6400164: stigma007
+    6400166: stigma008
+    6400168: stigma009
+    6400170: stigma010
+    6400172: stigma011
+    6400174: stigma012
+    6400176: stigma013
+    6400178: stigma014
+    6400180: stigma015
+    6400182: stigma016
+    6400184: stigma017
+    6400186: stigma018
+    6400188: stigma019
+    6400190: stigma020
+    6400192: stigma021
+    6400194: stigma022
+    6400196: stigma023
+    6400198: stigma024
+    6400200: stigma025
     7400000: Take 001
     9500000: //RootNode
   materials:
@@ -544,7 +645,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0

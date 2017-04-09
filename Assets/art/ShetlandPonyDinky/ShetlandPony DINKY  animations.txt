@@ -1,0 +1,16 @@
+Thankyou for purchasing this pack
+
+Direct X, FBX, Unwrap3d formats support Multitrack Named Animations, the same naming convention
+as below.
+
+For engines that require the traditional start/stop frame animation numbers, please use the
+following reference.
+
+Walk,0,36
+IdleA,37,235
+Buck,236,253
+GrazeA,254,363
+GrazeB,364,473
+Trot,474,490
+Run,491,503
+IdleB,504,617

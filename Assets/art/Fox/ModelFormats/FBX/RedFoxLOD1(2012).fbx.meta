@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: c2d2a728e165f4aa3881b5abfd3c8271
+timeCreated: 1491699621
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: MapRoot
+    100002: MapRoot_bone
+    100004: MapRoot_bone1
+    100006: MapRoot_bone2
+    100008: MapRoot_bone3
+    100010: MapRoot_bone4
+    100012: MapRoot_bone5
+    100014: MapRoot_Quadruped_Skeleton
+    100016: MapRoot_Quadruped_Skeleton_BLFemur
+    100018: MapRoot_Quadruped_Skeleton_BLFootBone1
+    100020: MapRoot_Quadruped_Skeleton_BLFootBone2
+    100022: MapRoot_Quadruped_Skeleton_BLFootBone3
+    100024: MapRoot_Quadruped_Skeleton_BLFootRoot
+    100026: MapRoot_Quadruped_Skeleton_BLLegRoot
+    100028: MapRoot_Quadruped_Skeleton_BLMetarsal
+    100030: MapRoot_Quadruped_Skeleton_BLTibia
+    100032: MapRoot_Quadruped_Skeleton_BRFemur
+    100034: MapRoot_Quadruped_Skeleton_BRFootBone1
+    100036: MapRoot_Quadruped_Skeleton_BRFootBone2
+    100038: MapRoot_Quadruped_Skeleton_BRFootBone3
+    100040: MapRoot_Quadruped_Skeleton_BRFootRoot
+    100042: MapRoot_Quadruped_Skeleton_BRLegRoot
+    100044: MapRoot_Quadruped_Skeleton_BRMetarsal
+    100046: MapRoot_Quadruped_Skeleton_BRTibia
+    100048: MapRoot_Quadruped_Skeleton_Chest
+    100050: MapRoot_Quadruped_Skeleton_Chest1
+    100052: MapRoot_Quadruped_Skeleton_ChestEffector
+    100054: MapRoot_Quadruped_Skeleton_eff
+    100056: MapRoot_Quadruped_Skeleton_eff1
+    100058: MapRoot_Quadruped_Skeleton_eff2
+    100060: MapRoot_Quadruped_Skeleton_eff4
+    100062: MapRoot_Quadruped_Skeleton_eff6
+    100064: MapRoot_Quadruped_Skeleton_eff7
+    100066: MapRoot_Quadruped_Skeleton_GlobalSRT
+    100068: MapRoot_Quadruped_Skeleton_LFootBone1
+    100070: MapRoot_Quadruped_Skeleton_LFootBone2
+    100072: MapRoot_Quadruped_Skeleton_LFootBone3
+    100074: MapRoot_Quadruped_Skeleton_LFootRoot
+    100076: MapRoot_Quadruped_Skeleton_LRoot
+    100078: MapRoot_Quadruped_Skeleton_LShin
+    100080: MapRoot_Quadruped_Skeleton_LShoulder
+    100082: MapRoot_Quadruped_Skeleton_LShoulderRoot
+    100084: MapRoot_Quadruped_Skeleton_LThigh
+    100086: MapRoot_Quadruped_Skeleton_RFootBone1
+    100088: MapRoot_Quadruped_Skeleton_RFootBone2
+    100090: MapRoot_Quadruped_Skeleton_RFootBone3
+    100092: MapRoot_Quadruped_Skeleton_RFootRoot
+    100094: MapRoot_Quadruped_Skeleton_root3
+    100096: MapRoot_Quadruped_Skeleton_RRoot
+    100098: MapRoot_Quadruped_Skeleton_RShin
+    100100: MapRoot_Quadruped_Skeleton_RShoulder
+    100102: MapRoot_Quadruped_Skeleton_RShoulderRoot
+    100104: MapRoot_Quadruped_Skeleton_RThigh
+    100106: MapRoot_Quadruped_Skeleton_Spine1
+    100108: MapRoot_Quadruped_Skeleton_Spine2
+    100110: MapRoot_Quadruped_Skeleton_Spine3
+    100112: MapRoot_Quadruped_Skeleton_Spine4
+    100114: MapRoot_Quadruped_Skeleton_Spine5
+    100116: MapRoot_Quadruped_Skeleton_SpineRoot
+    100118: MapRoot_Quadruped_Skeleton_SpineRoot1
+    100120: MapRoot_Quadruped_Skeleton_Tail1
+    100122: MapRoot_Quadruped_Skeleton_Tail2
+    100124: MapRoot_Quadruped_Skeleton_UpperBody
+    100126: MapRoot_root
+    100128: MapRoot_root1
+    100130: MapRoot_root2
+    100132: MapRoot_Scene_Root
+    100134: RedFoxLOD1
+    100136: //RootNode
+    100138: Scene_Root
+    400000: MapRoot
+    400002: MapRoot_bone
+    400004: MapRoot_bone1
+    400006: MapRoot_bone2
+    400008: MapRoot_bone3
+    400010: MapRoot_bone4
+    400012: MapRoot_bone5
+    400014: MapRoot_Quadruped_Skeleton
+    400016: MapRoot_Quadruped_Skeleton_BLFemur
+    400018: MapRoot_Quadruped_Skeleton_BLFootBone1
+    400020: MapRoot_Quadruped_Skeleton_BLFootBone2
+    400022: MapRoot_Quadruped_Skeleton_BLFootBone3
+    400024: MapRoot_Quadruped_Skeleton_BLFootRoot
+    400026: MapRoot_Quadruped_Skeleton_BLLegRoot
+    400028: MapRoot_Quadruped_Skeleton_BLMetarsal
+    400030: MapRoot_Quadruped_Skeleton_BLTibia
+    400032: MapRoot_Quadruped_Skeleton_BRFemur
+    400034: MapRoot_Quadruped_Skeleton_BRFootBone1
+    400036: MapRoot_Quadruped_Skeleton_BRFootBone2
+    400038: MapRoot_Quadruped_Skeleton_BRFootBone3
+    400040: MapRoot_Quadruped_Skeleton_BRFootRoot
+    400042: MapRoot_Quadruped_Skeleton_BRLegRoot
+    400044: MapRoot_Quadruped_Skeleton_BRMetarsal
+    400046: MapRoot_Quadruped_Skeleton_BRTibia
+    400048: MapRoot_Quadruped_Skeleton_Chest
+    400050: MapRoot_Quadruped_Skeleton_Chest1
+    400052: MapRoot_Quadruped_Skeleton_ChestEffector
+    400054: MapRoot_Quadruped_Skeleton_eff
+    400056: MapRoot_Quadruped_Skeleton_eff1
+    400058: MapRoot_Quadruped_Skeleton_eff2
+    400060: MapRoot_Quadruped_Skeleton_eff4
+    400062: MapRoot_Quadruped_Skeleton_eff6
+    400064: MapRoot_Quadruped_Skeleton_eff7
+    400066: MapRoot_Quadruped_Skeleton_GlobalSRT
+    400068: MapRoot_Quadruped_Skeleton_LFootBone1
+    400070: MapRoot_Quadruped_Skeleton_LFootBone2
+    400072: MapRoot_Quadruped_Skeleton_LFootBone3
+    400074: MapRoot_Quadruped_Skeleton_LFootRoot
+    400076: MapRoot_Quadruped_Skeleton_LRoot
+    400078: MapRoot_Quadruped_Skeleton_LShin
+    400080: MapRoot_Quadruped_Skeleton_LShoulder
+    400082: MapRoot_Quadruped_Skeleton_LShoulderRoot
+    400084: MapRoot_Quadruped_Skeleton_LThigh
+    400086: MapRoot_Quadruped_Skeleton_RFootBone1
+    400088: MapRoot_Quadruped_Skeleton_RFootBone2
+    400090: MapRoot_Quadruped_Skeleton_RFootBone3
+    400092: MapRoot_Quadruped_Skeleton_RFootRoot
+    400094: MapRoot_Quadruped_Skeleton_root3
+    400096: MapRoot_Quadruped_Skeleton_RRoot
+    400098: MapRoot_Quadruped_Skeleton_RShin
+    400100: MapRoot_Quadruped_Skeleton_RShoulder
+    400102: MapRoot_Quadruped_Skeleton_RShoulderRoot
+    400104: MapRoot_Quadruped_Skeleton_RThigh
+    400106: MapRoot_Quadruped_Skeleton_Spine1
+    400108: MapRoot_Quadruped_Skeleton_Spine2
+    400110: MapRoot_Quadruped_Skeleton_Spine3
+    400112: MapRoot_Quadruped_Skeleton_Spine4
+    400114: MapRoot_Quadruped_Skeleton_Spine5
+    400116: MapRoot_Quadruped_Skeleton_SpineRoot
+    400118: MapRoot_Quadruped_Skeleton_SpineRoot1
+    400120: MapRoot_Quadruped_Skeleton_Tail1
+    400122: MapRoot_Quadruped_Skeleton_Tail2
+    400124: MapRoot_Quadruped_Skeleton_UpperBody
+    400126: MapRoot_root
+    400128: MapRoot_root1
+    400130: MapRoot_root2
+    400132: MapRoot_Scene_Root
+    400134: RedFoxLOD1
+    400136: //RootNode
+    400138: Scene_Root
+    4300000: RedFoxLOD1
+    7400000: DefaultAnim
+    9500000: //RootNode
+    13700000: RedFoxLOD1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
