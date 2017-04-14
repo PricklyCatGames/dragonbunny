@@ -43,6 +43,8 @@ public class playerController : MonoBehaviour
 	cameraController cameraController;
 	gameController gameController;
 	shopMenuController shopMenu;
+	Animator animController;
+	float elapsedTime = 0.0f;
 	#endregion
 
 	// Use this for initialization
@@ -53,6 +55,7 @@ public class playerController : MonoBehaviour
 		gameController = GameObject.Find("gameController").GetComponent<gameController>();
 		shopMenu = GameObject.Find("shopMenu").GetComponent<shopMenuController>();
 		cameraController = GameObject.Find("Camera").GetComponent<cameraController>();
+		animController = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -64,6 +67,14 @@ public class playerController : MonoBehaviour
 //					", speed: " + currentSpeed);
 //		}
 //		Debug.Log("isJumping: " + isJumping + ", isGrounded: " + isGrounded);
+		
+		if(elapsedTime >= 7.0f)
+		{
+			animController.SetTrigger("Idle");
+			elapsedTime = 0.0f;
+		}
+		
+
 
 		if (isControllable)
 		{
@@ -72,6 +83,21 @@ public class playerController : MonoBehaviour
 			jumpButton = Input.GetButton("Jump");
 			actionButton = Input.GetButtonDown("Submit");
 			cancelButton = Input.GetButtonDown("Cancel");
+
+			animController.SetFloat("Forward", v);
+			if(v > 0.1f || jumpButton || actionButton || cancelButton)
+			{
+				elapsedTime = 0.0f;
+			}
+			else if(!animController.GetCurrentAnimatorStateInfo(0).IsName("stretch"))
+			{
+				elapsedTime += Time.deltaTime;
+			}
+
+			if(animController.GetBool("IsAttacking"))
+			{
+				animController.SetBool("IsAttacking", false);
+			}
 		}
 		else
 		{
@@ -369,6 +395,8 @@ public class playerController : MonoBehaviour
 		if (other.tag == "Enemy" && actionButton)
 		{
 			gameController.startBattle(other.gameObject);
+			// Initiate anim variable
+			animController.SetBool("IsAttacking", true);
 		}
 	}
 
@@ -431,6 +459,9 @@ public class playerController : MonoBehaviour
 		{
 			rigidBody.velocity = Vector3.zero;
 			gameController.startBattle(collision.gameObject);
+			// Initiate anim variable
+			animController.SetBool("IsAttacking", true);
+			animController.SetFloat("Forward", 0.0f);
 		}
 	}
 

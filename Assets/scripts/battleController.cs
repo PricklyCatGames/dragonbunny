@@ -680,6 +680,10 @@ public class battleController : MonoBehaviour
 					playerParty[selectedCharacter]);
 				attackTimer = charaSkills[0].rechargeTime;
 				defendTimer = charaSkills[0].rechargeTime;
+				// TODO Hard coded for now
+				// Play Attack Anim
+				var animPlayer = GameObject.Find("Ankalia v1(Clone)").GetComponent<Animator>();
+				animPlayer.SetTrigger("Attack");
 			}
 		}
 	}
