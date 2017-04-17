@@ -3,8 +3,8 @@
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/scripts/battleController.cs">
     <Files>
       <File FileName="Assets/scripts/gameController.cs" Line="217" Column="25" />
-      <File FileName="Assets/scripts/playerController.cs" Line="464" Column="45" />
-      <File FileName="Assets/scripts/battleController.cs" Line="686" Column="37" />
+      <File FileName="Assets/scripts/playerController.cs" Line="483" Column="16" />
+      <File FileName="Assets/scripts/battleController.cs" Line="689" Column="37" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
