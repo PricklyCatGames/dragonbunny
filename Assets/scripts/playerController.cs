@@ -45,6 +45,8 @@ public class playerController : MonoBehaviour
 	shopMenuController shopMenu;
 	Animator animController;
 	float elapsedTime = 0.0f;
+	public static bool isAttacking = false;
+	public static bool isAttackIdle = false;
 	#endregion
 
 	// Use this for initialization
@@ -68,11 +70,11 @@ public class playerController : MonoBehaviour
 //		}
 //		Debug.Log("isJumping: " + isJumping + ", isGrounded: " + isGrounded);
 		
-		if(elapsedTime >= 7.0f)
+		/*if(elapsedTime >= 7.0f)
 		{
 			animController.SetTrigger("Idle");
 			elapsedTime = 0.0f;
-		}
+		}*/
 		
 
 
@@ -84,7 +86,16 @@ public class playerController : MonoBehaviour
 			actionButton = Input.GetButtonDown("Submit");
 			cancelButton = Input.GetButtonDown("Cancel");
 
-			animController.SetFloat("Forward", v);
+			if(v >= 0.1f)
+			{
+				animController.Play("running");
+			}
+			else
+			{
+				animController.Play("idle");
+			}
+
+			/*animController.SetFloat("Forward", v);
 			if(v > 0.1f || jumpButton || actionButton || cancelButton)
 			{
 				elapsedTime = 0.0f;
@@ -97,7 +108,7 @@ public class playerController : MonoBehaviour
 			if(animController.GetBool("IsAttacking"))
 			{
 				animController.SetBool("IsAttacking", false);
-			}
+			}*/
 		}
 		else
 		{
@@ -105,6 +116,15 @@ public class playerController : MonoBehaviour
 			h = 0;
 			jumpButton = false;
 			actionButton = false;
+
+			if(isAttackIdle && !isAttacking)
+			{
+				animController.Play("AttackIdle");	
+			}
+			else if(isAttacking)
+			{
+				animController.Play("attack");
+			}
 		}
 		velocity = rigidBody.velocity;
 		yVelocity = velocity.y;
@@ -396,7 +416,7 @@ public class playerController : MonoBehaviour
 		{
 			gameController.startBattle(other.gameObject);
 			// Initiate anim variable
-			animController.SetBool("IsAttacking", true);
+			//animController.SetBool("IsAttacking", true);
 		}
 	}
 
@@ -460,8 +480,9 @@ public class playerController : MonoBehaviour
 			rigidBody.velocity = Vector3.zero;
 			gameController.startBattle(collision.gameObject);
 			// Initiate anim variable
-			animController.SetBool("IsAttacking", true);
-			animController.SetFloat("Forward", 0.0f);
+			isAttackIdle = true;
+			//animController.SetBool("IsAttacking", true);
+			//animController.SetFloat("Forward", 0.0f);
 		}
 	}
 

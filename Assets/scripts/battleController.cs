@@ -682,10 +682,21 @@ public class battleController : MonoBehaviour
 				defendTimer = charaSkills[0].rechargeTime;
 				// TODO Hard coded for now
 				// Play Attack Anim
-				var animPlayer = GameObject.Find("Ankalia v1(Clone)").GetComponent<Animator>();
-				animPlayer.SetTrigger("Attack");
+				//var animPlayer = GameObject.Find("Ankalia v1(Clone)").GetComponent<Animator>();
+				//animPlayer.Play("attack");
+				print(playerController.isAttacking);
+				playerController.isAttacking = true;
+				StartCoroutine(AttackCoolDown());
+				print(playerController.isAttacking);
 			}
 		}
+	}
+
+	IEnumerator AttackCoolDown()
+	{
+		yield return new WaitForSeconds(2.0f);
+		playerController.isAttacking = false;
+		print(playerController.isAttacking);
 	}
 
 	public void playerDefend()
@@ -1002,6 +1013,10 @@ public class battleController : MonoBehaviour
 //		{
 //			Destroy(player);
 //		}
+
+		playerController.isAttacking = false;
+		playerController.isAttackIdle = false;
+		
 	}
 
 	public void awardEXP()
