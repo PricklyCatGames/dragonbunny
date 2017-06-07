@@ -62,6 +62,8 @@ public class battleController : MonoBehaviour
 	public GameObject targetMenuContent;
 	public GameObject targetPrefab;
 	public Text[] targetsText;
+	public GameObject[] charaButtons;
+	public GameObject[] guestButtons;
 	public GameObject winScreen;
 	public Text coinsGainedText;
 	public Text EXPGainedText;
